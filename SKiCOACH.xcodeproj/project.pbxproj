@@ -11,11 +11,11 @@
 		EDBB775C223795A0004D3D2F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBB775B223795A0004D3D2F /* ViewController.swift */; };
 		EDBB775F223795A0004D3D2F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDBB775D223795A0004D3D2F /* Main.storyboard */; };
 		EDBB7762223795A0004D3D2F /* SKiCOACH.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EDBB7760223795A0004D3D2F /* SKiCOACH.xcdatamodeld */; };
-		EDBB7764223795A1004D3D2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDBB7763223795A1004D3D2F /* Assets.xcassets */; };
 		EDBB7767223795A1004D3D2F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDBB7765223795A1004D3D2F /* LaunchScreen.storyboard */; };
 		EDBB7772223795A1004D3D2F /* SKiCOACHTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBB7771223795A1004D3D2F /* SKiCOACHTests.swift */; };
 		EDBB777D223795A1004D3D2F /* SKiCOACHUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBB777C223795A1004D3D2F /* SKiCOACHUITests.swift */; };
 		EDBB778B22379772004D3D2F /* Images in Resources */ = {isa = PBXBuildFile; fileRef = EDBB778A22379772004D3D2F /* Images */; };
+		EDBB778F2237ED22004D3D2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDBB778E2237ED22004D3D2F /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +41,6 @@
 		EDBB775B223795A0004D3D2F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EDBB775E223795A0004D3D2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EDBB7761223795A0004D3D2F /* SKiCOACH.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SKiCOACH.xcdatamodel; sourceTree = "<group>"; };
-		EDBB7763223795A1004D3D2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EDBB7766223795A1004D3D2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EDBB7768223795A1004D3D2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EDBB776D223795A1004D3D2F /* SKiCOACHTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SKiCOACHTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,6 +50,7 @@
 		EDBB777C223795A1004D3D2F /* SKiCOACHUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKiCOACHUITests.swift; sourceTree = "<group>"; };
 		EDBB777E223795A1004D3D2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EDBB778A22379772004D3D2F /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Images; sourceTree = SOURCE_ROOT; };
+		EDBB778E2237ED22004D3D2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +105,7 @@
 				EDBB7759223795A0004D3D2F /* AppDelegate.swift */,
 				EDBB775B223795A0004D3D2F /* ViewController.swift */,
 				EDBB775D223795A0004D3D2F /* Main.storyboard */,
-				EDBB7763223795A1004D3D2F /* Assets.xcassets */,
+				EDBB778E2237ED22004D3D2F /* Assets.xcassets */,
 				EDBB7765223795A1004D3D2F /* LaunchScreen.storyboard */,
 				EDBB7768223795A1004D3D2F /* Info.plist */,
 				EDBB7760223795A0004D3D2F /* SKiCOACH.xcdatamodeld */,
@@ -237,8 +237,8 @@
 			files = (
 				EDBB778B22379772004D3D2F /* Images in Resources */,
 				EDBB7767223795A1004D3D2F /* LaunchScreen.storyboard in Resources */,
-				EDBB7764223795A1004D3D2F /* Assets.xcassets in Resources */,
 				EDBB775F223795A0004D3D2F /* Main.storyboard in Resources */,
+				EDBB778F2237ED22004D3D2F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
