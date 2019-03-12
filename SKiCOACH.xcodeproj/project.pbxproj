@@ -15,6 +15,7 @@
 		EDBB7767223795A1004D3D2F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDBB7765223795A1004D3D2F /* LaunchScreen.storyboard */; };
 		EDBB7772223795A1004D3D2F /* SKiCOACHTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBB7771223795A1004D3D2F /* SKiCOACHTests.swift */; };
 		EDBB777D223795A1004D3D2F /* SKiCOACHUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBB777C223795A1004D3D2F /* SKiCOACHUITests.swift */; };
+		EDBB778B22379772004D3D2F /* Images in Resources */ = {isa = PBXBuildFile; fileRef = EDBB778A22379772004D3D2F /* Images */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		EDBB7778223795A1004D3D2F /* SKiCOACHUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SKiCOACHUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDBB777C223795A1004D3D2F /* SKiCOACHUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKiCOACHUITests.swift; sourceTree = "<group>"; };
 		EDBB777E223795A1004D3D2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDBB778A22379772004D3D2F /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Images; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		EDBB7758223795A0004D3D2F /* SKiCOACH */ = {
 			isa = PBXGroup;
 			children = (
+				EDBB778A22379772004D3D2F /* Images */,
 				EDBB7759223795A0004D3D2F /* AppDelegate.swift */,
 				EDBB775B223795A0004D3D2F /* ViewController.swift */,
 				EDBB775D223795A0004D3D2F /* Main.storyboard */,
@@ -232,6 +235,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDBB778B22379772004D3D2F /* Images in Resources */,
 				EDBB7767223795A1004D3D2F /* LaunchScreen.storyboard in Resources */,
 				EDBB7764223795A1004D3D2F /* Assets.xcassets in Resources */,
 				EDBB775F223795A0004D3D2F /* Main.storyboard in Resources */,
