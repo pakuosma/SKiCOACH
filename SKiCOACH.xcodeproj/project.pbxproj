@@ -1,0 +1,608 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EDBB775A223795A0004D3D2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBB7759223795A0004D3D2F /* AppDelegate.swift */; };
+		EDBB775C223795A0004D3D2F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBB775B223795A0004D3D2F /* ViewController.swift */; };
+		EDBB775F223795A0004D3D2F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDBB775D223795A0004D3D2F /* Main.storyboard */; };
+		EDBB7762223795A0004D3D2F /* SKiCOACH.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EDBB7760223795A0004D3D2F /* SKiCOACH.xcdatamodeld */; };
+		EDBB7764223795A1004D3D2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDBB7763223795A1004D3D2F /* Assets.xcassets */; };
+		EDBB7767223795A1004D3D2F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDBB7765223795A1004D3D2F /* LaunchScreen.storyboard */; };
+		EDBB7772223795A1004D3D2F /* SKiCOACHTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBB7771223795A1004D3D2F /* SKiCOACHTests.swift */; };
+		EDBB777D223795A1004D3D2F /* SKiCOACHUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBB777C223795A1004D3D2F /* SKiCOACHUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EDBB776E223795A1004D3D2F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EDBB774E223795A0004D3D2F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EDBB7755223795A0004D3D2F;
+			remoteInfo = SKiCOACH;
+		};
+		EDBB7779223795A1004D3D2F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EDBB774E223795A0004D3D2F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EDBB7755223795A0004D3D2F;
+			remoteInfo = SKiCOACH;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EDBB7756223795A0004D3D2F /* SKiCOACH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SKiCOACH.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDBB7759223795A0004D3D2F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EDBB775B223795A0004D3D2F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EDBB775E223795A0004D3D2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EDBB7761223795A0004D3D2F /* SKiCOACH.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SKiCOACH.xcdatamodel; sourceTree = "<group>"; };
+		EDBB7763223795A1004D3D2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EDBB7766223795A1004D3D2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EDBB7768223795A1004D3D2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDBB776D223795A1004D3D2F /* SKiCOACHTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SKiCOACHTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDBB7771223795A1004D3D2F /* SKiCOACHTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKiCOACHTests.swift; sourceTree = "<group>"; };
+		EDBB7773223795A1004D3D2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDBB7778223795A1004D3D2F /* SKiCOACHUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SKiCOACHUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDBB777C223795A1004D3D2F /* SKiCOACHUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKiCOACHUITests.swift; sourceTree = "<group>"; };
+		EDBB777E223795A1004D3D2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EDBB7753223795A0004D3D2F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDBB776A223795A1004D3D2F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDBB7775223795A1004D3D2F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EDBB774D223795A0004D3D2F = {
+			isa = PBXGroup;
+			children = (
+				EDBB7758223795A0004D3D2F /* SKiCOACH */,
+				EDBB7770223795A1004D3D2F /* SKiCOACHTests */,
+				EDBB777B223795A1004D3D2F /* SKiCOACHUITests */,
+				EDBB7757223795A0004D3D2F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EDBB7757223795A0004D3D2F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EDBB7756223795A0004D3D2F /* SKiCOACH.app */,
+				EDBB776D223795A1004D3D2F /* SKiCOACHTests.xctest */,
+				EDBB7778223795A1004D3D2F /* SKiCOACHUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EDBB7758223795A0004D3D2F /* SKiCOACH */ = {
+			isa = PBXGroup;
+			children = (
+				EDBB7759223795A0004D3D2F /* AppDelegate.swift */,
+				EDBB775B223795A0004D3D2F /* ViewController.swift */,
+				EDBB775D223795A0004D3D2F /* Main.storyboard */,
+				EDBB7763223795A1004D3D2F /* Assets.xcassets */,
+				EDBB7765223795A1004D3D2F /* LaunchScreen.storyboard */,
+				EDBB7768223795A1004D3D2F /* Info.plist */,
+				EDBB7760223795A0004D3D2F /* SKiCOACH.xcdatamodeld */,
+			);
+			path = SKiCOACH;
+			sourceTree = "<group>";
+		};
+		EDBB7770223795A1004D3D2F /* SKiCOACHTests */ = {
+			isa = PBXGroup;
+			children = (
+				EDBB7771223795A1004D3D2F /* SKiCOACHTests.swift */,
+				EDBB7773223795A1004D3D2F /* Info.plist */,
+			);
+			path = SKiCOACHTests;
+			sourceTree = "<group>";
+		};
+		EDBB777B223795A1004D3D2F /* SKiCOACHUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EDBB777C223795A1004D3D2F /* SKiCOACHUITests.swift */,
+				EDBB777E223795A1004D3D2F /* Info.plist */,
+			);
+			path = SKiCOACHUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EDBB7755223795A0004D3D2F /* SKiCOACH */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EDBB7781223795A1004D3D2F /* Build configuration list for PBXNativeTarget "SKiCOACH" */;
+			buildPhases = (
+				EDBB7752223795A0004D3D2F /* Sources */,
+				EDBB7753223795A0004D3D2F /* Frameworks */,
+				EDBB7754223795A0004D3D2F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SKiCOACH;
+			productName = SKiCOACH;
+			productReference = EDBB7756223795A0004D3D2F /* SKiCOACH.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EDBB776C223795A1004D3D2F /* SKiCOACHTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EDBB7784223795A1004D3D2F /* Build configuration list for PBXNativeTarget "SKiCOACHTests" */;
+			buildPhases = (
+				EDBB7769223795A1004D3D2F /* Sources */,
+				EDBB776A223795A1004D3D2F /* Frameworks */,
+				EDBB776B223795A1004D3D2F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EDBB776F223795A1004D3D2F /* PBXTargetDependency */,
+			);
+			name = SKiCOACHTests;
+			productName = SKiCOACHTests;
+			productReference = EDBB776D223795A1004D3D2F /* SKiCOACHTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EDBB7777223795A1004D3D2F /* SKiCOACHUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EDBB7787223795A1004D3D2F /* Build configuration list for PBXNativeTarget "SKiCOACHUITests" */;
+			buildPhases = (
+				EDBB7774223795A1004D3D2F /* Sources */,
+				EDBB7775223795A1004D3D2F /* Frameworks */,
+				EDBB7776223795A1004D3D2F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EDBB777A223795A1004D3D2F /* PBXTargetDependency */,
+			);
+			name = SKiCOACHUITests;
+			productName = SKiCOACHUITests;
+			productReference = EDBB7778223795A1004D3D2F /* SKiCOACHUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EDBB774E223795A0004D3D2F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Elina Kuosmanen";
+				TargetAttributes = {
+					EDBB7755223795A0004D3D2F = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					EDBB776C223795A1004D3D2F = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = EDBB7755223795A0004D3D2F;
+					};
+					EDBB7777223795A1004D3D2F = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = EDBB7755223795A0004D3D2F;
+					};
+				};
+			};
+			buildConfigurationList = EDBB7751223795A0004D3D2F /* Build configuration list for PBXProject "SKiCOACH" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EDBB774D223795A0004D3D2F;
+			productRefGroup = EDBB7757223795A0004D3D2F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EDBB7755223795A0004D3D2F /* SKiCOACH */,
+				EDBB776C223795A1004D3D2F /* SKiCOACHTests */,
+				EDBB7777223795A1004D3D2F /* SKiCOACHUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EDBB7754223795A0004D3D2F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDBB7767223795A1004D3D2F /* LaunchScreen.storyboard in Resources */,
+				EDBB7764223795A1004D3D2F /* Assets.xcassets in Resources */,
+				EDBB775F223795A0004D3D2F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDBB776B223795A1004D3D2F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDBB7776223795A1004D3D2F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EDBB7752223795A0004D3D2F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDBB7762223795A0004D3D2F /* SKiCOACH.xcdatamodeld in Sources */,
+				EDBB775C223795A0004D3D2F /* ViewController.swift in Sources */,
+				EDBB775A223795A0004D3D2F /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDBB7769223795A1004D3D2F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDBB7772223795A1004D3D2F /* SKiCOACHTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDBB7774223795A1004D3D2F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDBB777D223795A1004D3D2F /* SKiCOACHUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EDBB776F223795A1004D3D2F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EDBB7755223795A0004D3D2F /* SKiCOACH */;
+			targetProxy = EDBB776E223795A1004D3D2F /* PBXContainerItemProxy */;
+		};
+		EDBB777A223795A1004D3D2F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EDBB7755223795A0004D3D2F /* SKiCOACH */;
+			targetProxy = EDBB7779223795A1004D3D2F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EDBB775D223795A0004D3D2F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EDBB775E223795A0004D3D2F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EDBB7765223795A1004D3D2F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EDBB7766223795A1004D3D2F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EDBB777F223795A1004D3D2F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EDBB7780223795A1004D3D2F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EDBB7782223795A1004D3D2F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M8DWY68Y3K;
+				INFOPLIST_FILE = SKiCOACH/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.elinakuosmanen.ios.payment.app.SKiCOACH;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EDBB7783223795A1004D3D2F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M8DWY68Y3K;
+				INFOPLIST_FILE = SKiCOACH/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.elinakuosmanen.ios.payment.app.SKiCOACH;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EDBB7785223795A1004D3D2F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M8DWY68Y3K;
+				INFOPLIST_FILE = SKiCOACHTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.elinakuosmanen.ios.payment.app.SKiCOACHTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SKiCOACH.app/SKiCOACH";
+			};
+			name = Debug;
+		};
+		EDBB7786223795A1004D3D2F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M8DWY68Y3K;
+				INFOPLIST_FILE = SKiCOACHTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.elinakuosmanen.ios.payment.app.SKiCOACHTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SKiCOACH.app/SKiCOACH";
+			};
+			name = Release;
+		};
+		EDBB7788223795A1004D3D2F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M8DWY68Y3K;
+				INFOPLIST_FILE = SKiCOACHUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.elinakuosmanen.ios.payment.app.SKiCOACHUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SKiCOACH;
+			};
+			name = Debug;
+		};
+		EDBB7789223795A1004D3D2F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M8DWY68Y3K;
+				INFOPLIST_FILE = SKiCOACHUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.elinakuosmanen.ios.payment.app.SKiCOACHUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SKiCOACH;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EDBB7751223795A0004D3D2F /* Build configuration list for PBXProject "SKiCOACH" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDBB777F223795A1004D3D2F /* Debug */,
+				EDBB7780223795A1004D3D2F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EDBB7781223795A1004D3D2F /* Build configuration list for PBXNativeTarget "SKiCOACH" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDBB7782223795A1004D3D2F /* Debug */,
+				EDBB7783223795A1004D3D2F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EDBB7784223795A1004D3D2F /* Build configuration list for PBXNativeTarget "SKiCOACHTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDBB7785223795A1004D3D2F /* Debug */,
+				EDBB7786223795A1004D3D2F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EDBB7787223795A1004D3D2F /* Build configuration list for PBXNativeTarget "SKiCOACHUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDBB7788223795A1004D3D2F /* Debug */,
+				EDBB7789223795A1004D3D2F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EDBB7760223795A0004D3D2F /* SKiCOACH.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EDBB7761223795A0004D3D2F /* SKiCOACH.xcdatamodel */,
+			);
+			currentVersion = EDBB7761223795A0004D3D2F /* SKiCOACH.xcdatamodel */;
+			path = SKiCOACH.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = EDBB774E223795A0004D3D2F /* Project object */;
+}
