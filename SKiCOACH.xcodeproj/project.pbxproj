@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		28B913A1225F6F8C00ED13BF /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28B9139F225F6F8C00ED13BF /* Interface.storyboard */; };
+		28B913A3225F6F8D00ED13BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28B913A2225F6F8D00ED13BF /* Assets.xcassets */; };
+		28B913AA225F6F8D00ED13BF /* SKiCOACHWatch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 28B913A9225F6F8D00ED13BF /* SKiCOACHWatch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		28B913AF225F6F8D00ED13BF /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B913AE225F6F8D00ED13BF /* InterfaceController.swift */; };
+		28B913B1225F6F8D00ED13BF /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B913B0225F6F8D00ED13BF /* ExtensionDelegate.swift */; };
+		28B913B3225F6F8E00ED13BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28B913B2225F6F8E00ED13BF /* Assets.xcassets */; };
+		28B913B7225F6F8E00ED13BF /* SKiCOACHWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 28B9139D225F6F8C00ED13BF /* SKiCOACHWatch.app */; };
 		ED84A90B225CA7F4002D90F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED84A90A225CA7F4002D90F0 /* Main.storyboard */; };
 		ED84A90E225CAA3D002D90F0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED84A90D225CAA3D002D90F0 /* MapKit.framework */; };
 		EDBB775A223795A0004D3D2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBB7759223795A0004D3D2F /* AppDelegate.swift */; };
@@ -20,6 +27,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		28B913AB225F6F8D00ED13BF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EDBB774E223795A0004D3D2F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 28B913A8225F6F8D00ED13BF;
+			remoteInfo = "SKiCOACHWatch Extension";
+		};
+		28B913B5225F6F8E00ED13BF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EDBB774E223795A0004D3D2F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 28B9139C225F6F8C00ED13BF;
+			remoteInfo = SKiCOACHWatch;
+		};
 		EDBB776E223795A1004D3D2F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EDBB774E223795A0004D3D2F /* Project object */;
@@ -36,7 +57,41 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		28B913BD225F6F8E00ED13BF /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				28B913AA225F6F8D00ED13BF /* SKiCOACHWatch Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28B913BF225F6F8E00ED13BF /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				28B913B7225F6F8E00ED13BF /* SKiCOACHWatch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		28B9139D225F6F8C00ED13BF /* SKiCOACHWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SKiCOACHWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		28B913A0225F6F8C00ED13BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		28B913A2225F6F8D00ED13BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		28B913A4225F6F8D00ED13BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28B913A9225F6F8D00ED13BF /* SKiCOACHWatch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "SKiCOACHWatch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		28B913AE225F6F8D00ED13BF /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		28B913B0225F6F8D00ED13BF /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		28B913B2225F6F8E00ED13BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		28B913B4225F6F8E00ED13BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED84A90A225CA7F4002D90F0 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		ED84A90D225CAA3D002D90F0 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		EDBB7756223795A0004D3D2F /* SKiCOACH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SKiCOACH.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,6 +111,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		28B913A6225F6F8D00ED13BF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EDBB7753223795A0004D3D2F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -81,6 +143,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		28B9139E225F6F8C00ED13BF /* SKiCOACHWatch */ = {
+			isa = PBXGroup;
+			children = (
+				28B9139F225F6F8C00ED13BF /* Interface.storyboard */,
+				28B913A2225F6F8D00ED13BF /* Assets.xcassets */,
+				28B913A4225F6F8D00ED13BF /* Info.plist */,
+			);
+			path = SKiCOACHWatch;
+			sourceTree = "<group>";
+		};
+		28B913AD225F6F8D00ED13BF /* SKiCOACHWatch Extension */ = {
+			isa = PBXGroup;
+			children = (
+				28B913AE225F6F8D00ED13BF /* InterfaceController.swift */,
+				28B913B0225F6F8D00ED13BF /* ExtensionDelegate.swift */,
+				28B913B2225F6F8E00ED13BF /* Assets.xcassets */,
+				28B913B4225F6F8E00ED13BF /* Info.plist */,
+			);
+			path = "SKiCOACHWatch Extension";
+			sourceTree = "<group>";
+		};
 		ED84A90C225CAA3D002D90F0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +178,8 @@
 				EDBB7758223795A0004D3D2F /* SKiCOACH */,
 				EDBB7770223795A1004D3D2F /* SKiCOACHTests */,
 				EDBB777B223795A1004D3D2F /* SKiCOACHUITests */,
+				28B9139E225F6F8C00ED13BF /* SKiCOACHWatch */,
+				28B913AD225F6F8D00ED13BF /* SKiCOACHWatch Extension */,
 				EDBB7757223795A0004D3D2F /* Products */,
 				ED84A90C225CAA3D002D90F0 /* Frameworks */,
 			);
@@ -106,6 +191,8 @@
 				EDBB7756223795A0004D3D2F /* SKiCOACH.app */,
 				EDBB776D223795A1004D3D2F /* SKiCOACHTests.xctest */,
 				EDBB7778223795A1004D3D2F /* SKiCOACHUITests.xctest */,
+				28B9139D225F6F8C00ED13BF /* SKiCOACHWatch.app */,
+				28B913A9225F6F8D00ED13BF /* SKiCOACHWatch Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -146,6 +233,40 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		28B9139C225F6F8C00ED13BF /* SKiCOACHWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 28B913BE225F6F8E00ED13BF /* Build configuration list for PBXNativeTarget "SKiCOACHWatch" */;
+			buildPhases = (
+				28B9139B225F6F8C00ED13BF /* Resources */,
+				28B913BD225F6F8E00ED13BF /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				28B913AC225F6F8D00ED13BF /* PBXTargetDependency */,
+			);
+			name = SKiCOACHWatch;
+			productName = SKiCOACHWatch;
+			productReference = 28B9139D225F6F8C00ED13BF /* SKiCOACHWatch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		28B913A8225F6F8D00ED13BF /* SKiCOACHWatch Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 28B913BC225F6F8E00ED13BF /* Build configuration list for PBXNativeTarget "SKiCOACHWatch Extension" */;
+			buildPhases = (
+				28B913A5225F6F8D00ED13BF /* Sources */,
+				28B913A6225F6F8D00ED13BF /* Frameworks */,
+				28B913A7225F6F8D00ED13BF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SKiCOACHWatch Extension";
+			productName = "SKiCOACHWatch Extension";
+			productReference = 28B913A9225F6F8D00ED13BF /* SKiCOACHWatch Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 		EDBB7755223795A0004D3D2F /* SKiCOACH */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = EDBB7781223795A1004D3D2F /* Build configuration list for PBXNativeTarget "SKiCOACH" */;
@@ -153,10 +274,12 @@
 				EDBB7752223795A0004D3D2F /* Sources */,
 				EDBB7753223795A0004D3D2F /* Frameworks */,
 				EDBB7754223795A0004D3D2F /* Resources */,
+				28B913BF225F6F8E00ED13BF /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				28B913B6225F6F8E00ED13BF /* PBXTargetDependency */,
 			);
 			name = SKiCOACH;
 			productName = SKiCOACH;
@@ -209,6 +332,12 @@
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Elina Kuosmanen";
 				TargetAttributes = {
+					28B9139C225F6F8C00ED13BF = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					28B913A8225F6F8D00ED13BF = {
+						CreatedOnToolsVersion = 10.1;
+					};
 					EDBB7755223795A0004D3D2F = {
 						CreatedOnToolsVersion = 10.1;
 						SystemCapabilities = {
@@ -243,11 +372,30 @@
 				EDBB7755223795A0004D3D2F /* SKiCOACH */,
 				EDBB776C223795A1004D3D2F /* SKiCOACHTests */,
 				EDBB7777223795A1004D3D2F /* SKiCOACHUITests */,
+				28B9139C225F6F8C00ED13BF /* SKiCOACHWatch */,
+				28B913A8225F6F8D00ED13BF /* SKiCOACHWatch Extension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		28B9139B225F6F8C00ED13BF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28B913A3225F6F8D00ED13BF /* Assets.xcassets in Resources */,
+				28B913A1225F6F8C00ED13BF /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28B913A7225F6F8D00ED13BF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28B913B3225F6F8E00ED13BF /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EDBB7754223795A0004D3D2F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -276,6 +424,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		28B913A5225F6F8D00ED13BF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28B913B1225F6F8D00ED13BF /* ExtensionDelegate.swift in Sources */,
+				28B913AF225F6F8D00ED13BF /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EDBB7752223795A0004D3D2F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -305,6 +462,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		28B913AC225F6F8D00ED13BF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 28B913A8225F6F8D00ED13BF /* SKiCOACHWatch Extension */;
+			targetProxy = 28B913AB225F6F8D00ED13BF /* PBXContainerItemProxy */;
+		};
+		28B913B6225F6F8E00ED13BF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 28B9139C225F6F8C00ED13BF /* SKiCOACHWatch */;
+			targetProxy = 28B913B5225F6F8E00ED13BF /* PBXContainerItemProxy */;
+		};
 		EDBB776F223795A1004D3D2F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = EDBB7755223795A0004D3D2F /* SKiCOACH */;
@@ -318,6 +485,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		28B9139F225F6F8C00ED13BF /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				28B913A0225F6F8C00ED13BF /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
 		EDBB7765223795A1004D3D2F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -329,6 +504,88 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		28B913B8225F6F8E00ED13BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M8DWY68Y3K;
+				IBSC_MODULE = SKiCOACHWatch_Extension;
+				INFOPLIST_FILE = SKiCOACHWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.elinakuosmanen.ios.payment.app.SKiCOACH.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+			};
+			name = Debug;
+		};
+		28B913B9225F6F8E00ED13BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M8DWY68Y3K;
+				IBSC_MODULE = SKiCOACHWatch_Extension;
+				INFOPLIST_FILE = SKiCOACHWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.elinakuosmanen.ios.payment.app.SKiCOACH.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+			};
+			name = Release;
+		};
+		28B913BA225F6F8E00ED13BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YRBX37HT2C;
+				INFOPLIST_FILE = "SKiCOACHWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.elinakuosmanen.ios.payment.app.SKiCOACH.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+			};
+			name = Debug;
+		};
+		28B913BB225F6F8E00ED13BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YRBX37HT2C;
+				INFOPLIST_FILE = "SKiCOACHWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.elinakuosmanen.ios.payment.app.SKiCOACH.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+			};
+			name = Release;
+		};
 		EDBB777F223795A1004D3D2F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -566,6 +823,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		28B913BC225F6F8E00ED13BF /* Build configuration list for PBXNativeTarget "SKiCOACHWatch Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28B913BA225F6F8E00ED13BF /* Debug */,
+				28B913BB225F6F8E00ED13BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		28B913BE225F6F8E00ED13BF /* Build configuration list for PBXNativeTarget "SKiCOACHWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28B913B8225F6F8E00ED13BF /* Debug */,
+				28B913B9225F6F8E00ED13BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		EDBB7751223795A0004D3D2F /* Build configuration list for PBXProject "SKiCOACH" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
