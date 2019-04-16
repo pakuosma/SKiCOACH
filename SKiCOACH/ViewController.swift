@@ -7,18 +7,30 @@
 //
 
 import UIKit
+import MapKit
+import CoreLocation
+import CoreData
 
 class ViewController: UIViewController {
     
     @IBOutlet weak var skatingStyleImage: UIImageView!
+    @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var datePicker: UIDatePicker!
+    
+    var distance:Double = 0
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+
+    }
     
-    @IBAction func skatingStyleButtons(_ sender: UISegmentedControl) {
+    override func viewDidAppear(_ animated: Bool) {
+        
+    }
+    @IBAction func pushedSkatingStyleButtons(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 0:
             skatingStyleImage.image = UIImage.init(named: "select-classic")
@@ -31,5 +43,17 @@ class ViewController: UIViewController {
         }
     }
     
+
 }
+
+extension Date {
+    func roundDate(calendar cal: Calendar) -> Date {
+        let year  = cal.component(.year, from: self)
+        let month = cal.component(.month, from: self)
+        let day   = cal.component(.day, from: self)
+        return cal.date(from: DateComponents(year: year, month: month, day: day))!
+    }
+}
+
+
 

@@ -91,7 +91,7 @@
                                     <segue destination="rlN-hH-oec" kind="show" id="2zf-DP-vMC"/>
                                 </connections>
                             </button>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="select-classic_50" translatesAutoresizingMaskIntoConstraints="NO" id="yn1-h2-4aC">
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="select-classic_50" translatesAutoresizingMaskIntoConstraints="NO" id="yn1-h2-4aC">
                                 <rect key="frame" x="16" y="290" width="343" height="241"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
@@ -103,7 +103,7 @@
                                     <segment title="Free Style"/>
                                 </segments>
                                 <connections>
-                                    <action selector="skatingStyleButtons:" destination="VvY-IH-oW1" eventType="valueChanged" id="2ME-js-ZGD"/>
+                                    <action selector="pushedSkatingStyleButtons:" destination="VvY-IH-oW1" eventType="valueChanged" id="H37-p4-IKJ"/>
                                 </connections>
                             </segmentedControl>
                         </subviews>
@@ -119,10 +119,10 @@
             </objects>
             <point key="canvasLocation" x="624.3119999999999" y="-3608.8515742128943"/>
         </scene>
-        <!--View Controller-->
+        <!--Session View Controller-->
         <scene sceneID="PxT-2p-W5c">
             <objects>
-                <viewController id="rlN-hH-oec" sceneMemberID="viewController">
+                <viewController id="rlN-hH-oec" customClass="SessionViewController" customModule="SKiCOACH" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Z1l-0r-UZV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -212,10 +212,6 @@
                                     <segue destination="Q5k-au-jL6" kind="show" id="UUl-yB-08M"/>
                                 </connections>
                             </button>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="VC5-bo-cZS">
-                                <rect key="frame" x="35" y="502" width="359" height="279"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </mapView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pause" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZWB-Id-Agb">
                                 <rect key="frame" x="35" y="766" width="151" height="91"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -223,6 +219,10 @@
                                 <color key="textColor" red="0.39612824969999999" green="0.41331786790000002" blue="0.71821028629999994" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="VC5-bo-cZS">
+                                <rect key="frame" x="20" y="500" width="359" height="279"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="p4X-kY-vhO"/>

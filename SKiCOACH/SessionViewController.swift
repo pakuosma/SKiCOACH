@@ -1,0 +1,73 @@
+//
+//  SessionViewController.swift
+//  SKiCOACH
+//
+//  Created by Elina Kuosmanen on 16/04/2019.
+//  Copyright © 2019 Elina Kuosmanen. All rights reserved.
+//
+
+import UIKit
+import CoreLocation
+import UserNotifications
+
+class SessionViewController: UIViewController {
+
+    var locationSensor:LocationSensor? = nil
+    var locationUpdateObserveer:Any? = nil
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        self.locationSensor = appDelegate.locationSensor
+        self.locationSensor?.setLocationHandler{ locations in
+            for location in locations {
+                print(location)
+            }
+        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        switch CLLocationManager.authorizationStatus(){
+        case .authorizedAlways, .authorizedWhenInUse, .notDetermined:
+            self.locationSensor!.start()
+        case .restricted, .denied:
+            break
+        }
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        if let observer = locationUpdateObserveer {
+            NotificationCenter.default.removeObserver(observer)
+        }
+        
+        self.locationSensor!.stop()
+        UserDefaults.standard.set(false, forKey: LocationSensor.SENSOR_LOCATION_SETTING_STATUS)
+    }
+
+}
+
+
+
+//class LocationSensor: NSObject, CLLocationManagerDelegate{
+//  let locationManager = CLLocationManager()
+//override init(){
+//  super.init()
+//locationManager.delegate = self
+//    }
+
+//  func start(){
+
+//}
+//  func stop(){
+
+// }
+//  func locationManager(_ manager:CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus){
+
+//    }
+//  func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation] ){
+//}
+//}
+
