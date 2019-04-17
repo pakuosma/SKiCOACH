@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14460.31" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14460.31" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="8tB-S1-UTp">
     <device id="watch44" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -14,6 +14,69 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="SKiCOACHWatch" customModuleProvider="target"/>
             </objects>
+            <point key="canvasLocation" x="84" y="90"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="qb4-57-tgy">
+            <objects>
+                <controller id="NRB-hF-ccO" customClass="InterfaceController" customModule="SKiCOACHWatch" customModuleProvider="target">
+                    <items>
+                        <label alignment="left" text="Duration" id="urA-Kf-LLJ">
+                            <fontDescription key="font" type="system" pointSize="16"/>
+                        </label>
+                        <label width="1" alignment="left" text="3:20:22" textAlignment="center" id="ENo-Yd-kSo">
+                            <fontDescription key="font" type="system" pointSize="44"/>
+                        </label>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="23.652173913043477" y="501.65178571428572"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="fX5-Nl-cys">
+            <objects>
+                <controller id="7e3-bo-3oR" customClass="InterfaceController" customModule="SKiCOACHWatch" customModuleProvider="target">
+                    <items>
+                        <imageView alignment="left" image="skate" id="6it-w2-hve"/>
+                        <imageView alignment="left" image="skater-90-white-fill" id="HUg-wE-tfL"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="24" y="780"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="33K-go-1mb">
+            <objects>
+                <controller id="sel-li-yNg" customClass="InterfaceController" customModule="SKiCOACHWatch" customModuleProvider="target">
+                    <items>
+                        <imageView width="49" height="45" alignment="left" image="skater-90-white-fill" id="1yh-w8-Mc9"/>
+                        <label alignment="left" verticalAlignment="center" text="Duration" id="6N9-6Q-lBY">
+                            <fontDescription key="font" type="system" pointSize="16"/>
+                        </label>
+                        <label width="1" alignment="left" verticalAlignment="center" text="3:20:22" textAlignment="center" id="woU-2j-FGY">
+                            <fontDescription key="font" type="system" pointSize="44"/>
+                        </label>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="278.65217391304344" y="501.65178571428572"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="n02-75-fFy">
+            <objects>
+                <controller id="8tB-S1-UTp" customClass="InterfaceController" customModule="SKiCOACHWatch" customModuleProvider="target">
+                    <items>
+                        <imageView alignment="left" image="skater-90-white-fill" id="cuz-W1-jFc"/>
+                        <label alignment="left" text="Duration" id="bvd-cA-JdN">
+                            <fontDescription key="font" type="system" pointSize="16"/>
+                        </label>
+                        <label width="1" alignment="left" text="3:20:22" textAlignment="center" id="0sj-kf-KSO">
+                            <fontDescription key="font" type="system" pointSize="44"/>
+                        </label>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="450" y="90"/>
         </scene>
     </scenes>
 </document>
