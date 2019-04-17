@@ -57,15 +57,15 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items/>
                             </tabBar>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="icons8-voice-100" translatesAutoresizingMaskIntoConstraints="NO" id="H5G-Fa-3P2">
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="icons8-voice-100" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H5G-Fa-3P2">
                                 <rect key="frame" x="60" y="55" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="icons8-proximity-sensor-96-2" translatesAutoresizingMaskIntoConstraints="NO" id="ly2-9i-EcF">
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="icons8-proximity-sensor-96-2" translatesAutoresizingMaskIntoConstraints="NO" id="ly2-9i-EcF">
                                 <rect key="frame" x="266" y="56" width="48" height="48"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="icons8-smart-watch-128" translatesAutoresizingMaskIntoConstraints="NO" id="GeI-8s-ZPV">
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="icons8-smart-watch-128" translatesAutoresizingMaskIntoConstraints="NO" id="GeI-8s-ZPV">
                                 <rect key="frame" x="155" y="48" width="64" height="64"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
