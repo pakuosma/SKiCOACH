@@ -521,10 +521,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = M8DWY68Y3K;
+				DEVELOPMENT_TEAM = YRBX37HT2C;
 				IBSC_MODULE = SKiCOACHWatch_Extension;
 				INFOPLIST_FILE = SKiCOACHWatch/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = com.elinakuosmanen.ios.payment.app.SKiCOACH.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SKiCOACH.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -540,10 +540,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = M8DWY68Y3K;
+				DEVELOPMENT_TEAM = YRBX37HT2C;
 				IBSC_MODULE = SKiCOACHWatch_Extension;
 				INFOPLIST_FILE = SKiCOACHWatch/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = com.elinakuosmanen.ios.payment.app.SKiCOACH.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SKiCOACH.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -565,7 +565,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.elinakuosmanen.ios.payment.app.SKiCOACH.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SKiCOACH.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -587,7 +587,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.elinakuosmanen.ios.payment.app.SKiCOACH.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SKiCOACH.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -718,13 +718,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = M8DWY68Y3K;
+				DEVELOPMENT_TEAM = YRBX37HT2C;
 				INFOPLIST_FILE = SKiCOACH/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.elinakuosmanen.ios.payment.app.SKiCOACH;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SKiCOACH;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -736,13 +736,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = M8DWY68Y3K;
+				DEVELOPMENT_TEAM = YRBX37HT2C;
 				INFOPLIST_FILE = SKiCOACH/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.elinakuosmanen.ios.payment.app.SKiCOACH;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SKiCOACH;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -755,7 +755,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = M8DWY68Y3K;
+				DEVELOPMENT_TEAM = YRBX37HT2C;
 				INFOPLIST_FILE = SKiCOACHTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -776,7 +776,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = M8DWY68Y3K;
+				DEVELOPMENT_TEAM = YRBX37HT2C;
 				INFOPLIST_FILE = SKiCOACHTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -796,7 +796,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = M8DWY68Y3K;
+				DEVELOPMENT_TEAM = YRBX37HT2C;
 				INFOPLIST_FILE = SKiCOACHUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -816,7 +816,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = M8DWY68Y3K;
+				DEVELOPMENT_TEAM = YRBX37HT2C;
 				INFOPLIST_FILE = SKiCOACHUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -26,7 +26,7 @@
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 	</array>
 	<key>WKCompanionAppBundleIdentifier</key>
-	<string>com.elinakuosmanen.ios.payment.app.SKiCOACH</string>
+	<string>com.SKiCOACH</string>
 	<key>WKWatchKitApp</key>
 	<true/>
 </dict>
