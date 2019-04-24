@@ -1144,30 +1144,20 @@
     </scenes>
     <resources>
         <image name="Image-1" width="45" height="45"/>
-<<<<<<< HEAD
-        <image name="icons8-alpine-skiing-60" width="16" height="16"/>
-=======
         <image name="fresh-sparkling-snow-800x375L2" width="187" height="400"/>
         <image name="fresh-sparkling-snow-800x375R" width="187" height="400"/>
         <image name="fresh-sparkling-snow-800x375R2" width="187" height="400"/>
         <image name="icons8-alpine-skiing-60" width="30" height="30"/>
->>>>>>> 38e2fbc853b5eae53e060de6c08c61eb8d80a68f
         <image name="icons8-checkmark-48" width="48" height="48"/>
         <image name="icons8-cross-country-skiing-60" width="30" height="30"/>
         <image name="icons8-delete-48" width="48" height="48"/>
         <image name="icons8-heart-with-pulse-100" width="50" height="50"/>
         <image name="icons8-proximity-sensor-96-2" width="48" height="48"/>
-<<<<<<< HEAD
-        <image name="icons8-ruler-128-2" width="64" height="64"/>
-        <image name="icons8-smart-watch-128" width="64" height="64"/>
-        <image name="icons8-speed-100" width="50" height="50"/>
-=======
         <image name="icons8-ruler-128" width="64" height="64"/>
         <image name="icons8-ruler-128-2" width="64" height="64"/>
         <image name="icons8-smart-watch-128" width="64" height="64"/>
         <image name="icons8-speed-100" width="50" height="50"/>
         <image name="icons8-timer-101" width="50" height="50"/>
->>>>>>> 38e2fbc853b5eae53e060de6c08c61eb8d80a68f
         <image name="icons8-timer-96-2" width="48" height="48"/>
         <image name="icons8-voice-100" width="50" height="50"/>
         <image name="select-classic_50" width="450" height="300"/>
