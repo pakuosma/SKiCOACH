@@ -9,11 +9,13 @@
 import UIKit
 import CoreLocation
 import UserNotifications
+import MapKit
 
 class SessionViewController: UIViewController {
 
     var locationSensor:LocationSensor? = nil
-    var locationUpdateObserveer:Any? = nil
+    var locationUpdateObserver:Any? = nil
+    @IBOutlet weak var mapView: MKMapView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,19 +35,33 @@ class SessionViewController: UIViewController {
         switch CLLocationManager.authorizationStatus(){
         case .authorizedAlways, .authorizedWhenInUse, .notDetermined:
             self.locationSensor!.start()
-        case .restricted, .denied:
+            
+            self.locationSensor?.setLocationHandler({ (locations) in
+                for location in locations{
+                    let latitude = location.coordinate.latitude
+                    let longitude = location.coordinate.longitude
+                    let anotation = MKPointAnnotation()
+                    anotation.coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+                    print(location)
+                    // self.mapView!.addAnnotation(anotation)
+                }
+            })
+            break
+        case .restricted:
+            break
+        case .denied:
             break
         }
     }
     
-    override func viewDidDisappear(_ animated: Bool) {
-        if let observer = locationUpdateObserveer {
-            NotificationCenter.default.removeObserver(observer)
-        }
-        
-        self.locationSensor!.stop()
-        UserDefaults.standard.set(false, forKey: LocationSensor.SENSOR_LOCATION_SETTING_STATUS)
-    }
+//    override func viewDidDisappear(_ animated: Bool) {
+//        if let observer = locationUpdateObserver {
+//            NotificationCenter.default.removeObserver(observer)
+//        }
+//
+//        self.locationSensor!.stop()
+//        UserDefaults.standard.set(false, forKey: LocationSensor.SENSOR_LOCATION_SETTING_STATUS)
+//    }
 
 }
 

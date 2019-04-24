@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 import CoreData
 import CoreLocation
+import MapKit
 
 
 extension Notification.Name{
@@ -88,6 +89,7 @@ extension LocationSensor: CLLocationManagerDelegate {
     }
     
     public func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
         self.saveLocations(locations)
         if let handler = eventHandler {
             handler(locations)
@@ -172,4 +174,5 @@ extension LocationSensor {
         }
         return nil
     }
+
 }
