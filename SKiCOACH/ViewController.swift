@@ -2,14 +2,18 @@
 //  ViewController.swift
 //  SKiCOACH
 //
-//  Created by Elina Kuosmanen on 12/03/2019.
-//  Copyright © 2019 Elina Kuosmanen. All rights reserved.
+//  Created by Markus Turtinen on 11.4.2019.
+//  Copyright © 2019 Team Red. All rights reserved.
 //
-
 import UIKit
+import WatchConnectivity
 import MapKit
 import CoreLocation
 import CoreData
+
+extension Notification.Name {
+    static let receivedWatchMessage = Notification.Name("receivedWatchMessage")
+}
 
 class ViewController: UIViewController {
     
@@ -17,13 +21,16 @@ class ViewController: UIViewController {
     @IBOutlet weak var sensingSwitch: UISwitch!
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var datePicker: UIDatePicker!
+    @IBOutlet weak var fromWatchLabel: UILabel!
     
     var locationSensor:LocationSensor? = nil
-    
     var distance:Double = 0
     
+    let session = WCSession.default
     
     override func viewDidLoad() {
+        super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(messageReceived), name: .receivedWatchMessage, object: nil)
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         self.locationSensor = appDelegate.locationSensor
         
@@ -33,6 +40,14 @@ class ViewController: UIViewController {
 //            self.sensingSwitch.isOn = false
 //        }
 
+    }
+    
+    @objc func messageReceived(info: Notification)
+    {
+        let message = info.userInfo!
+        DispatchQueue.main.async {
+            self.fromWatchLabel.text = message["msg"] as? String
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -81,13 +96,20 @@ class ViewController: UIViewController {
             }
         }
     }
+    
     @IBAction func pushedSkatingStyleButtons(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 0:
             skatingStyleImage.image = UIImage.init(named: "select-classic")
+            if self.session.isPaired == true && self.session.isWatchAppInstalled == true {
+                self.session.sendMessage(["msg":"start classic training"], replyHandler: nil, errorHandler: nil)
+            }
             break
         case 1:
             skatingStyleImage.image = UIImage.init(named: "select-skate")
+            if self.session.isPaired == true && self.session.isWatchAppInstalled == true {
+                self.session.sendMessage(["msg":"start skate training"], replyHandler: nil, errorHandler: nil)
+            }
             break
         default:
             break

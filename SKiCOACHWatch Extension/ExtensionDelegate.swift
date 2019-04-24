@@ -3,15 +3,35 @@
 //  SKiCOACHWatch Extension
 //
 //  Created by Markus Turtinen on 11.4.2019.
-//  Copyright © 2019 Elina Kuosmanen. All rights reserved.
+//  Copyright © 2019 Team Red. All rights reserved.
 //
 
 import WatchKit
+import WatchConnectivity
 
-class ExtensionDelegate: NSObject, WKExtensionDelegate {
+extension Notification.Name {
+    static let receivedPhoneData = Notification.Name("receivedPhoneData")
+}
+
+class ExtensionDelegate: NSObject, WKExtensionDelegate, WCSessionDelegate {
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        //code
+    }
+    
+    func session(_ session: WCSession, didReceiveMessage message: [String : AnyObject] ) {
+        NotificationCenter.default.post(name: .receivedPhoneData, object: self, userInfo: message)
+    }
 
     func applicationDidFinishLaunching() {
         // Perform any final initialization of your application.
+        
+        //obsolete check on watch side?
+        if WCSession.isSupported()
+        {
+            let session = WCSession.default
+            session.delegate = self
+            session.activate()
+        }
     }
 
     func applicationDidBecomeActive() {

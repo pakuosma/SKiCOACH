@@ -3,7 +3,7 @@
 //  SKiCOACHUITests
 //
 //  Created by Elina Kuosmanen on 12/03/2019.
-//  Copyright © 2019 Elina Kuosmanen. All rights reserved.
+//  Copyright © 2019 Team Red. All rights reserved.
 //
 
 import XCTest

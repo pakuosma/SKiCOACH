@@ -27,10 +27,11 @@
                         <label width="1" alignment="left" text="3:20:22" textAlignment="center" id="ENo-Yd-kSo">
                             <fontDescription key="font" type="system" pointSize="44"/>
                         </label>
+                        <activity alignment="left" id="wcT-pz-2gz"/>
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="23.652173913043477" y="501.65178571428572"/>
+            <point key="canvasLocation" x="344" y="453"/>
         </scene>
         <!--Interface Controller-->
         <scene sceneID="fX5-Nl-cys">
@@ -42,7 +43,7 @@
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="24" y="780"/>
+            <point key="canvasLocation" x="619" y="425"/>
         </scene>
         <!--Interface Controller-->
         <scene sceneID="33K-go-1mb">
@@ -59,7 +60,7 @@
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="278.65217391304344" y="501.65178571428572"/>
+            <point key="canvasLocation" x="84" y="425"/>
         </scene>
         <!--Interface Controller-->
         <scene sceneID="n02-75-fFy">
@@ -73,10 +74,123 @@
                         <label width="1" alignment="left" text="3:20:22" textAlignment="center" id="0sj-kf-KSO">
                             <fontDescription key="font" type="system" pointSize="44"/>
                         </label>
+                        <label alignment="left" text="Label" id="fKE-ca-aal"/>
+                        <button width="1" alignment="left" title="Button" id="Uk4-IK-HI3">
+                            <connections>
+                                <action selector="toPhoneTapped" destination="8tB-S1-UTp" id="iuc-AU-r94"/>
+                            </connections>
+                        </button>
                     </items>
+                    <connections>
+                        <outlet property="messageLabel" destination="fKE-ca-aal" id="MtI-z6-gAq"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="450" y="90"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="pTw-dh-EV7">
+            <objects>
+                <controller id="FDH-G8-BfI" customClass="InterfaceController" customModule="SKiCOACHWatch" customModuleProvider="target">
+                    <items>
+                        <imageView width="49" height="45" alignment="left" image="skater-90-white-fill" id="F3c-E9-yra"/>
+                        <label alignment="left" verticalAlignment="center" text="Duration" id="1fG-Jh-mrw">
+                            <fontDescription key="font" type="system" pointSize="16"/>
+                        </label>
+                        <label width="1" alignment="left" verticalAlignment="center" text="Start" textAlignment="center" id="c0t-d0-Imj">
+                            <fontDescription key="font" type="system" pointSize="44"/>
+                        </label>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="84" y="846"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="pYc-9p-rh7">
+            <objects>
+                <controller id="p7z-ZJ-hS0" customClass="InterfaceController" customModule="SKiCOACHWatch" customModuleProvider="target">
+                    <items>
+                        <imageView width="49" height="45" alignment="left" image="skater-90-white-fill" id="HZ5-lg-7EO"/>
+                        <label alignment="left" verticalAlignment="center" text="Duration" id="ogH-c5-MqD">
+                            <fontDescription key="font" type="system" pointSize="16"/>
+                        </label>
+                        <label width="1" alignment="left" verticalAlignment="center" text="Pause" textAlignment="center" id="o2h-g2-qGd">
+                            <fontDescription key="font" type="system" pointSize="44"/>
+                        </label>
+                        <label width="1" alignment="left" verticalAlignment="center" text="Stop" textAlignment="center" id="GvJ-I6-aKm">
+                            <fontDescription key="font" type="system" pointSize="36"/>
+                        </label>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="553" y="845"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="cU5-rB-WCQ">
+            <objects>
+                <controller id="Wbe-gd-7Ak" customClass="InterfaceController" customModule="SKiCOACHWatch" customModuleProvider="target">
+                    <items>
+                        <imageView width="49" height="45" alignment="left" image="skater-90-white-fill" id="bJt-8T-BPs"/>
+                        <label alignment="left" verticalAlignment="center" text="Duration" id="KHs-Zf-gYf">
+                            <fontDescription key="font" type="system" pointSize="16"/>
+                        </label>
+                        <label width="1" alignment="left" verticalAlignment="center" text="&lt;timer&gt;" textAlignment="center" id="QUP-WN-t3O">
+                            <fontDescription key="font" type="system" pointSize="44"/>
+                        </label>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="315" y="845"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="sZx-ol-HXh">
+            <objects>
+                <controller id="AXO-bG-qQM" customClass="InterfaceController" customModule="SKiCOACHWatch" customModuleProvider="target">
+                    <items>
+                        <label alignment="left" verticalAlignment="center" text="Style gauge" id="znK-S0-zNR">
+                            <fontDescription key="font" type="system" pointSize="24"/>
+                        </label>
+                        <label width="1" alignment="left" verticalAlignment="center" textAlignment="center" id="w8f-AD-DvV">
+                            <fontDescription key="font" type="system" pointSize="44"/>
+                        </label>
+                        <label width="1" alignment="left" verticalAlignment="center" text="Wassberg    67%" textAlignment="left" id="xDG-Wm-dAj">
+                            <fontDescription key="font" type="system" pointSize="24"/>
+                        </label>
+                        <label width="1" alignment="left" verticalAlignment="center" text="Dbl-poling 12%" textAlignment="left" id="dmy-tf-TDU">
+                            <fontDescription key="font" type="system" pointSize="24"/>
+                        </label>
+                        <label width="1" alignment="left" verticalAlignment="center" text="Slide 12%" textAlignment="left" id="TCZ-Pm-7tX">
+                            <fontDescription key="font" type="system" pointSize="24"/>
+                        </label>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="84" y="1253"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="Opp-iu-3IK">
+            <objects>
+                <controller id="vGT-2d-4ZI" customClass="InterfaceController" customModule="SKiCOACHWatch" customModuleProvider="target">
+                    <items>
+                        <label alignment="left" verticalAlignment="center" text="Style gauge" id="bMx-39-00M">
+                            <fontDescription key="font" type="system" pointSize="24"/>
+                        </label>
+                        <label width="1" alignment="left" verticalAlignment="center" textAlignment="center" id="SGL-dN-paj">
+                            <fontDescription key="font" type="system" pointSize="44"/>
+                        </label>
+                        <label width="1" alignment="left" verticalAlignment="center" text="Wassberg    67%" textAlignment="left" id="xei-MG-TcX">
+                            <fontDescription key="font" type="system" pointSize="24"/>
+                        </label>
+                        <label width="1" alignment="left" verticalAlignment="center" text="Dbl-poling 12%" textAlignment="left" id="wMz-Nx-OgD">
+                            <fontDescription key="font" type="system" pointSize="24"/>
+                        </label>
+                        <label width="1" alignment="left" verticalAlignment="center" text="Slide 12%" textAlignment="left" id="BWz-Hf-p7e">
+                            <fontDescription key="font" type="system" pointSize="24"/>
+                        </label>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="384" y="1253"/>
         </scene>
     </scenes>
 </document>

@@ -2,8 +2,8 @@
 //  SessionViewController.swift
 //  SKiCOACH
 //
-//  Created by Elina Kuosmanen on 16/04/2019.
-//  Copyright © 2019 Elina Kuosmanen. All rights reserved.
+//  Created by Markus Turtinen on 11.4.2019.
+//  Copyright © 2019 Team Red. All rights reserved.
 //
 
 import UIKit

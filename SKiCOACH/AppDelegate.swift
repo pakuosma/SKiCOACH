@@ -2,23 +2,49 @@
 //  AppDelegate.swift
 //  SKiCOACH
 //
-//  Created by Elina Kuosmanen on 12/03/2019.
-//  Copyright © 2019 Elina Kuosmanen. All rights reserved.
+//  Created by Markus Turtinen on 11.4.2019.
+//  Copyright © 2019 Team Red. All rights reserved.
 //
 
+import WatchConnectivity
 import UIKit
 import CoreData
 import CoreLocation
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-    
+class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
+
     var window: UIWindow?
+    
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        //<#code#>
+    }
+    
+    func session(_ session: WCSession, didReceiveMessage message: [String : AnyObject]) {
+        //NotificationCenter.defaultCenter().postNotificationName("receivedWatchMessage",object: self, userInfo: message)
+        //NotificationCenter.default.post(name: NSNotification.Name(rawValue: "receivedWatchMessage"), object: self, userInfo: message)
+        NotificationCenter.default.post(name: .receivedWatchMessage, object: self, userInfo: message)
+    }
+    
+    
+    func sessionDidBecomeInactive(_ session: WCSession) {
+        
+    }
+    
+    func sessionDidDeactivate(_ session: WCSession) {
+        
+    }
     
     public let locationSensor = LocationSensor()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        if (WCSession.isSupported()) {
+            let session = WCSession.default
+            session.delegate = self
+            session.activate()
+        }
         
         // start the location sensor if the sensor is authorized
         switch CLLocationManager.authorizationStatus(){
