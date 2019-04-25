@@ -87,15 +87,6 @@
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kP9-Ks-2PR">
-                                <rect key="frame" x="156" y="644" width="81" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" title="tap to start"/>
-                                <connections>
-                                    <segue destination="rlN-hH-oec" kind="show" id="2zf-DP-vMC"/>
-                                </connections>
-                            </button>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="select-classic_50" translatesAutoresizingMaskIntoConstraints="NO" id="yn1-h2-4aC">
                                 <rect key="frame" x="0.0" y="290" width="414" height="346"/>
                                 <autoresizingMask key="autoresizingMask"/>
@@ -112,12 +103,21 @@
                                 </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="do not delete this label yet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C7d-U9-I18">
-                                <rect key="frame" x="116" y="673" width="202" height="21"/>
+                                <rect key="frame" x="115" y="720" width="202" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kP9-Ks-2PR">
+                                <rect key="frame" x="86" y="644" width="243" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="44"/>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <segue destination="rlN-hH-oec" kind="show" id="2zf-DP-vMC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="5kf-R2-y6j"/>
@@ -239,20 +239,20 @@
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v4E-Qr-ric">
-                                <rect key="frame" x="46" y="743" width="49" height="41"/>
+                                <rect key="frame" x="82" y="732" width="88" height="65"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="44"/>
                                 <state key="normal" title="Stop"/>
                                 <connections>
                                     <segue destination="Q5k-au-jL6" kind="show" id="cbU-Zf-iX2"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xhE-81-lyW">
-                                <rect key="frame" x="136" y="736" width="124" height="70"/>
+                                <rect key="frame" x="214" y="732" width="114" height="65"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="44"/>
                                 <state key="normal" title="Pause">
-                                    <color key="titleColor" red="0.39612824969999999" green="0.41331786790000002" blue="0.71821028629999994" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
                         </subviews>
@@ -1151,26 +1151,26 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Image-1" width="45" height="45"/>
-        <image name="fresh-sparkling-snow-800x375L2" width="187" height="400"/>
-        <image name="fresh-sparkling-snow-800x375R" width="187" height="400"/>
-        <image name="fresh-sparkling-snow-800x375R2" width="187" height="400"/>
-        <image name="icons8-alpine-skiing-60" width="30" height="30"/>
-        <image name="icons8-checkmark-48" width="48" height="48"/>
-        <image name="icons8-cross-country-skiing-60" width="30" height="30"/>
-        <image name="icons8-delete-48" width="48" height="48"/>
-        <image name="icons8-heart-with-pulse-100" width="50" height="50"/>
-        <image name="icons8-proximity-sensor-96-2" width="48" height="48"/>
-        <image name="icons8-ruler-128" width="64" height="64"/>
-        <image name="icons8-ruler-128-2" width="64" height="64"/>
-        <image name="icons8-smart-watch-128" width="64" height="64"/>
-        <image name="icons8-speed-100" width="50" height="50"/>
-        <image name="icons8-timer-101" width="50" height="50"/>
-        <image name="icons8-timer-96-2" width="48" height="48"/>
-        <image name="icons8-voice-100" width="50" height="50"/>
+        <image name="Image-1" width="67.5" height="67.5"/>
+        <image name="fresh-sparkling-snow-800x375L2" width="375" height="800"/>
+        <image name="fresh-sparkling-snow-800x375R" width="375" height="800"/>
+        <image name="fresh-sparkling-snow-800x375R2" width="375" height="800"/>
+        <image name="icons8-alpine-skiing-60" width="45" height="45"/>
+        <image name="icons8-checkmark-48" width="36" height="36"/>
+        <image name="icons8-cross-country-skiing-60" width="45" height="45"/>
+        <image name="icons8-delete-48" width="36" height="36"/>
+        <image name="icons8-heart-with-pulse-100" width="75" height="75"/>
+        <image name="icons8-proximity-sensor-96-2" width="72" height="72"/>
+        <image name="icons8-ruler-128" width="96" height="96"/>
+        <image name="icons8-ruler-128-2" width="96" height="96"/>
+        <image name="icons8-smart-watch-128" width="96" height="96"/>
+        <image name="icons8-speed-100" width="75" height="75"/>
+        <image name="icons8-timer-101" width="75.75" height="75.75"/>
+        <image name="icons8-timer-96-2" width="72" height="72"/>
+        <image name="icons8-voice-100" width="75" height="75"/>
         <image name="select-classic_50" width="450" height="300"/>
-        <image name="skater-180" width="90" height="90"/>
+        <image name="skater-180" width="135" height="135"/>
         <image name="ski_route.jpg" width="472" height="735"/>
-        <image name="snowflakes2436x1125" width="562" height="1218"/>
+        <image name="snowflakes2436x1125" width="270" height="584.6400146484375"/>
     </resources>
 </document>
