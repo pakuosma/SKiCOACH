@@ -472,7 +472,7 @@
             </objects>
             <point key="canvasLocation" x="2198.5507246376815" y="-3609.375"/>
         </scene>
-        <!--View Controller-->
+        <!--History-->
         <scene sceneID="14U-2g-6bw">
             <objects>
                 <viewController id="yBN-Ip-C7m" sceneMemberID="viewController">
@@ -1020,7 +1020,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="BDi-U5-rLy"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="icons8-calendar-48" id="Cdv-F0-a2T"/>
+                    <tabBarItem key="tabBarItem" title="History" image="icons8-calendar-49" id="Cdv-F0-a2T"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mo8-yc-Tch" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1067,7 +1067,7 @@
         <image name="fresh-sparkling-snow-800x375L2" width="375" height="800"/>
         <image name="fresh-sparkling-snow-800x375R" width="375" height="800"/>
         <image name="icons8-alpine-skiing-60" width="45" height="45"/>
-        <image name="icons8-calendar-48" width="36" height="36"/>
+        <image name="icons8-calendar-49" width="36" height="36"/>
         <image name="icons8-calories-100" width="75" height="75"/>
         <image name="icons8-checkmark-48" width="36" height="36"/>
         <image name="icons8-cross-country-skiing-60" width="45" height="45"/>
