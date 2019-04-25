@@ -1033,14 +1033,61 @@
                     <view key="view" contentMode="scaleToFill" id="Cbj-Ft-1Pq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name: Markus Sportsman" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eMz-Sc-AHL">
+                                <rect key="frame" x="64" y="483" width="286" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Weight: 82 kg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GSM-os-sYA">
+                                <rect key="frame" x="64" y="518" width="286" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Height: 180 cm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DvL-vy-nUW">
+                                <rect key="frame" x="64" y="556" width="286" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DAg-t3-DmU">
+                                <rect key="frame" x="64" y="101" width="49" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="WWQJ2150" translatesAutoresizingMaskIntoConstraints="NO" id="Em7-ac-zc6">
+                                <rect key="frame" x="87" y="150" width="240" height="310"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="snowflakes-1236247.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="NbU-6g-tep">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="NbU-6g-tep" firstAttribute="bottom" secondItem="PzM-qA-NXe" secondAttribute="bottom" id="BZg-48-rt0"/>
+                            <constraint firstItem="NbU-6g-tep" firstAttribute="bottom" secondItem="PzM-qA-NXe" secondAttribute="bottom" id="ByK-0D-8Q3"/>
+                            <constraint firstItem="NbU-6g-tep" firstAttribute="top" secondItem="PzM-qA-NXe" secondAttribute="top" id="K5s-a2-zlt"/>
+                            <constraint firstItem="PzM-qA-NXe" firstAttribute="trailing" secondItem="NbU-6g-tep" secondAttribute="trailing" id="Ucs-jO-vfy"/>
+                            <constraint firstItem="NbU-6g-tep" firstAttribute="leading" secondItem="PzM-qA-NXe" secondAttribute="leading" id="k0M-Zm-ThE"/>
+                            <constraint firstItem="NbU-6g-tep" firstAttribute="top" secondItem="Cbj-Ft-1Pq" secondAttribute="top" id="rqC-YN-a5C"/>
+                            <constraint firstItem="NbU-6g-tep" firstAttribute="trailing" secondItem="PzM-qA-NXe" secondAttribute="trailing" id="v8K-3C-O83"/>
+                            <constraint firstItem="NbU-6g-tep" firstAttribute="leading" secondItem="PzM-qA-NXe" secondAttribute="leading" id="zXv-dc-zlJ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="PzM-qA-NXe"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="icons8-alpine-skiing-60" id="DM3-aP-VJ0"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VrC-rV-keD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="571" y="-2063"/>
+            <point key="canvasLocation" x="569.56521739130437" y="-2063.1696428571427"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="XUd-UR-pTz">
@@ -1064,6 +1111,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="WWQJ2150" width="1200" height="1599"/>
         <image name="fresh-sparkling-snow-800x375L2" width="375" height="800"/>
         <image name="fresh-sparkling-snow-800x375R" width="375" height="800"/>
         <image name="icons8-alpine-skiing-60" width="45" height="45"/>
@@ -1073,7 +1121,7 @@
         <image name="icons8-cross-country-skiing-60" width="45" height="45"/>
         <image name="icons8-delete-48" width="36" height="36"/>
         <image name="icons8-heart-with-pulse-100" width="75" height="75"/>
-        <image name="icons8-home-page-24" width="54" height="54"/>
+        <image name="icons8-home-page-24" width="48.75" height="48.75"/>
         <image name="icons8-proximity-sensor-96-2" width="72" height="72"/>
         <image name="icons8-ruler-128" width="96" height="96"/>
         <image name="icons8-smart-watch-128" width="96" height="96"/>
@@ -1084,6 +1132,7 @@
         <image name="select-classic_50" width="450" height="300"/>
         <image name="skater-180" width="135" height="135"/>
         <image name="ski_route.jpg" width="472" height="735"/>
+        <image name="snowflakes-1236247.jpg" width="4297" height="2865"/>
         <image name="snowflakes2436x1125" width="270" height="584.6400146484375"/>
     </resources>
     <inferredMetricsTieBreakers>
