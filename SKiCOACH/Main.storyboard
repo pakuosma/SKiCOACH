@@ -43,7 +43,7 @@
             </objects>
             <point key="canvasLocation" x="1796" y="-2774"/>
         </scene>
-        <!--View Controller-->
+        <!--Start-->
         <scene sceneID="qnF-KF-8JL">
             <objects>
                 <viewController id="VvY-IH-oW1" customClass="ViewController" customModule="SKiCOACH" customModuleProvider="target" sceneMemberID="viewController">
@@ -122,7 +122,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="5kf-R2-y6j"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="favorites" id="2Qq-St-nDu"/>
+                    <tabBarItem key="tabBarItem" title="Start" image="icons8-star-100" id="2Qq-St-nDu"/>
                     <connections>
                         <outlet property="fromWatchLabel" destination="C7d-U9-I18" id="gkp-QK-pPL"/>
                         <outlet property="skatingStyleImage" destination="yn1-h2-4aC" id="ocs-JA-1jJ"/>
@@ -269,11 +269,11 @@
             <objects>
                 <viewController id="Q5k-au-jL6" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ypj-wu-hMK">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1400"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ppf-EE-BCC">
-                                <rect key="frame" x="0.0" y="44" width="414" height="956"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="1356"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="79E-ca-qyd">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
@@ -282,7 +282,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Great job! :)  This exercise" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7MZ-h8-BiM">
-                                                <rect key="frame" x="72" y="517" width="267" height="29"/>
+                                                <rect key="frame" x="72" y="690" width="267" height="29"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                 <color key="textColor" red="0.0" green="0.1441096584311039" blue="0.71821028629999994" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -350,6 +350,42 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="786 kcal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4cb-gB-taa">
+                                                <rect key="frame" x="90" y="619" width="94" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="icons8-calories-100" translatesAutoresizingMaskIntoConstraints="NO" id="Avd-Oc-6YC">
+                                                <rect key="frame" x="98" y="538" width="67" height="67"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Calories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pPd-w3-L4S">
+                                                <rect key="frame" x="102" y="605" width="56" height="18"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5.7 C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vaB-9o-nd1">
+                                                <rect key="frame" x="241" y="624" width="58" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="icons8-temperature-100" translatesAutoresizingMaskIntoConstraints="NO" id="0kx-Qs-pV2">
+                                                <rect key="frame" x="237" y="543" width="67" height="67"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Avg. Temperature" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Na-Mw-mKu">
+                                                <rect key="frame" x="217" y="610" width="121" height="18"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Max Speed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jlE-Bq-J1Q">
                                                 <rect key="frame" x="93" y="468" width="77" height="18"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -386,16 +422,12 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="developed your endurance!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZGB-ek-YBs">
-                                                <rect key="frame" x="66" y="544" width="282" height="29"/>
+                                                <rect key="frame" x="66" y="717" width="282" height="29"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                 <color key="textColor" red="0.0" green="0.14385786993542107" blue="0.71695542878704654" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="ski_route.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="b8G-dN-LWa">
-                                                <rect key="frame" x="66" y="581" width="282" height="350"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="171 ppm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e3D-bI-ew0">
                                                 <rect key="frame" x="228" y="488" width="91" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -413,11 +445,23 @@
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
+                                            <constraint firstItem="j4K-cm-iJY" firstAttribute="top" secondItem="79E-ca-qyd" secondAttribute="top" id="8Lc-0w-ZQv"/>
+                                            <constraint firstAttribute="trailing" secondItem="j4K-cm-iJY" secondAttribute="trailing" id="8qe-CD-gEv"/>
+                                            <constraint firstAttribute="trailing" secondItem="j4K-cm-iJY" secondAttribute="trailing" id="GsM-v3-Num"/>
+                                            <constraint firstItem="j4K-cm-iJY" firstAttribute="leading" secondItem="79E-ca-qyd" secondAttribute="leading" id="Hd6-dz-CKQ"/>
+                                            <constraint firstAttribute="bottom" secondItem="j4K-cm-iJY" secondAttribute="bottom" id="Pmr-4F-yDS"/>
+                                            <constraint firstAttribute="bottom" secondItem="j4K-cm-iJY" secondAttribute="bottom" id="QxN-9a-FMQ"/>
                                             <constraint firstAttribute="height" constant="1000" id="Qzk-Aa-mhA"/>
+                                            <constraint firstItem="j4K-cm-iJY" firstAttribute="leading" secondItem="79E-ca-qyd" secondAttribute="leading" id="XmO-yu-irM"/>
                                             <constraint firstAttribute="bottom" secondItem="j4K-cm-iJY" secondAttribute="bottom" id="YJD-FY-Z6a"/>
+                                            <constraint firstItem="j4K-cm-iJY" firstAttribute="top" secondItem="79E-ca-qyd" secondAttribute="top" id="Z5m-hf-TCs"/>
                                             <constraint firstAttribute="trailing" secondItem="j4K-cm-iJY" secondAttribute="trailing" id="eRJ-Rl-tCK"/>
                                             <constraint firstItem="j4K-cm-iJY" firstAttribute="leading" secondItem="79E-ca-qyd" secondAttribute="leading" id="gd1-6S-Xfa"/>
+                                            <constraint firstAttribute="trailing" secondItem="j4K-cm-iJY" secondAttribute="trailing" id="hV3-yY-2W0"/>
+                                            <constraint firstItem="j4K-cm-iJY" firstAttribute="top" secondItem="79E-ca-qyd" secondAttribute="top" id="rxk-bb-OoI"/>
                                             <constraint firstItem="j4K-cm-iJY" firstAttribute="top" secondItem="79E-ca-qyd" secondAttribute="top" id="tbm-up-qPJ"/>
+                                            <constraint firstItem="j4K-cm-iJY" firstAttribute="leading" secondItem="79E-ca-qyd" secondAttribute="leading" id="uDq-Fa-gT9"/>
+                                            <constraint firstAttribute="bottom" secondItem="j4K-cm-iJY" secondAttribute="bottom" id="vVB-Sj-Q9r"/>
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My XC Training" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m17-oL-dY3">
@@ -434,6 +478,10 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="ski_route.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="b8G-dN-LWa">
+                                        <rect key="frame" x="67" y="790" width="282" height="350"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="79E-ca-qyd" secondAttribute="bottom" id="5b8-J3-ge4"/>
@@ -454,7 +502,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="AYe-rc-7o7"/>
                     </view>
-                    <size key="freeformSize" width="414" height="1000"/>
+                    <size key="freeformSize" width="414" height="1400"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7yw-l9-EXF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1014,7 +1062,7 @@
             </objects>
             <point key="canvasLocation" x="711.59420289855075" y="-2810.4910714285711"/>
         </scene>
-        <!--Item-->
+        <!--Profile-->
         <scene sceneID="OPU-8r-4cp">
             <objects>
                 <viewController id="zII-RO-XYc" sceneMemberID="viewController">
@@ -1024,7 +1072,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="PzM-qA-NXe"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="DM3-aP-VJ0"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="icons8-alpine-skiing-60" id="DM3-aP-VJ0"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VrC-rV-keD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1187,6 +1235,7 @@
         <image name="fresh-sparkling-snow-800x375R2" width="375" height="800"/>
         <image name="icons8-alpine-skiing-60" width="45" height="45"/>
         <image name="icons8-calendar-48" width="36" height="36"/>
+        <image name="icons8-calories-100" width="75" height="75"/>
         <image name="icons8-checkmark-48" width="36" height="36"/>
         <image name="icons8-cross-country-skiing-60" width="45" height="45"/>
         <image name="icons8-delete-48" width="36" height="36"/>
@@ -1196,6 +1245,8 @@
         <image name="icons8-ruler-128-2" width="96" height="96"/>
         <image name="icons8-smart-watch-128" width="96" height="96"/>
         <image name="icons8-speed-100" width="75" height="75"/>
+        <image name="icons8-star-100" width="75" height="75"/>
+        <image name="icons8-temperature-100" width="75" height="75"/>
         <image name="icons8-timer-101" width="75.75" height="75.75"/>
         <image name="icons8-timer-96-2" width="72" height="72"/>
         <image name="icons8-voice-100" width="75" height="75"/>
