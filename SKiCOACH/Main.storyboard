@@ -1034,6 +1034,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fresh-sparkling-snow-800x375L" translatesAutoresizingMaskIntoConstraints="NO" id="NbU-6g-tep">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name: Markus Sportsman" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eMz-Sc-AHL">
                                 <rect key="frame" x="64" y="483" width="286" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1066,20 +1069,13 @@
                                 <rect key="frame" x="87" y="150" width="240" height="310"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="snowflakes-1236247.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="NbU-6g-tep">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="NbU-6g-tep" firstAttribute="bottom" secondItem="PzM-qA-NXe" secondAttribute="bottom" id="BZg-48-rt0"/>
-                            <constraint firstItem="NbU-6g-tep" firstAttribute="bottom" secondItem="PzM-qA-NXe" secondAttribute="bottom" id="ByK-0D-8Q3"/>
-                            <constraint firstItem="NbU-6g-tep" firstAttribute="top" secondItem="PzM-qA-NXe" secondAttribute="top" id="K5s-a2-zlt"/>
-                            <constraint firstItem="PzM-qA-NXe" firstAttribute="trailing" secondItem="NbU-6g-tep" secondAttribute="trailing" id="Ucs-jO-vfy"/>
-                            <constraint firstItem="NbU-6g-tep" firstAttribute="leading" secondItem="PzM-qA-NXe" secondAttribute="leading" id="k0M-Zm-ThE"/>
-                            <constraint firstItem="NbU-6g-tep" firstAttribute="top" secondItem="Cbj-Ft-1Pq" secondAttribute="top" id="rqC-YN-a5C"/>
-                            <constraint firstItem="NbU-6g-tep" firstAttribute="trailing" secondItem="PzM-qA-NXe" secondAttribute="trailing" id="v8K-3C-O83"/>
-                            <constraint firstItem="NbU-6g-tep" firstAttribute="leading" secondItem="PzM-qA-NXe" secondAttribute="leading" id="zXv-dc-zlJ"/>
+                            <constraint firstItem="NbU-6g-tep" firstAttribute="leading" secondItem="PzM-qA-NXe" secondAttribute="leading" id="IzR-AX-7IP"/>
+                            <constraint firstItem="NbU-6g-tep" firstAttribute="trailing" secondItem="PzM-qA-NXe" secondAttribute="trailing" id="Td8-yr-1bf"/>
+                            <constraint firstItem="NbU-6g-tep" firstAttribute="top" secondItem="PzM-qA-NXe" secondAttribute="top" id="ovk-Vx-j8k"/>
+                            <constraint firstItem="NbU-6g-tep" firstAttribute="bottom" secondItem="PzM-qA-NXe" secondAttribute="bottom" id="udT-hs-Qk7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PzM-qA-NXe"/>
                     </view>
@@ -1112,6 +1108,7 @@
     </scenes>
     <resources>
         <image name="WWQJ2150" width="1200" height="1599"/>
+        <image name="fresh-sparkling-snow-800x375L" width="375" height="800"/>
         <image name="fresh-sparkling-snow-800x375L2" width="375" height="800"/>
         <image name="fresh-sparkling-snow-800x375R" width="375" height="800"/>
         <image name="icons8-alpine-skiing-60" width="45" height="45"/>
@@ -1132,7 +1129,6 @@
         <image name="select-classic_50" width="450" height="300"/>
         <image name="skater-180" width="135" height="135"/>
         <image name="ski_route.jpg" width="472" height="735"/>
-        <image name="snowflakes-1236247.jpg" width="4297" height="2865"/>
         <image name="snowflakes2436x1125" width="270" height="584.6400146484375"/>
     </resources>
     <inferredMetricsTieBreakers>
