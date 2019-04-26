@@ -18,6 +18,7 @@
 		ED1EB9D52265F2A700F1C3D1 /* SessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1EB9D42265F2A700F1C3D1 /* SessionViewController.swift */; };
 		ED84A90B225CA7F4002D90F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED84A90A225CA7F4002D90F0 /* Main.storyboard */; };
 		ED84A90E225CAA3D002D90F0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED84A90D225CAA3D002D90F0 /* MapKit.framework */; };
+		EDA9B5E5227333B700AB0807 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA9B5E4227333B700AB0807 /* ResultViewController.swift */; };
 		EDBB775A223795A0004D3D2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBB7759223795A0004D3D2F /* AppDelegate.swift */; };
 		EDBB775C223795A0004D3D2F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBB775B223795A0004D3D2F /* ViewController.swift */; };
 		EDBB7762223795A0004D3D2F /* SKiCOACH.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EDBB7760223795A0004D3D2F /* SKiCOACH.xcdatamodeld */; };
@@ -98,6 +99,7 @@
 		ED1EB9D42265F2A700F1C3D1 /* SessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionViewController.swift; sourceTree = "<group>"; };
 		ED84A90A225CA7F4002D90F0 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		ED84A90D225CAA3D002D90F0 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		EDA9B5E4227333B700AB0807 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		EDBB7756223795A0004D3D2F /* SKiCOACH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SKiCOACH.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDBB7759223795A0004D3D2F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDBB775B223795A0004D3D2F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -208,6 +210,7 @@
 				EDBB7759223795A0004D3D2F /* AppDelegate.swift */,
 				EDBB775B223795A0004D3D2F /* ViewController.swift */,
 				ED1EB9D42265F2A700F1C3D1 /* SessionViewController.swift */,
+				EDA9B5E4227333B700AB0807 /* ResultViewController.swift */,
 				ED84A90A225CA7F4002D90F0 /* Main.storyboard */,
 				EDBB778E2237ED22004D3D2F /* Assets.xcassets */,
 				EDBB7765223795A1004D3D2F /* LaunchScreen.storyboard */,
@@ -451,6 +454,7 @@
 				ED1EB9D32265DD2100F1C3D1 /* LocationSensor.swift in Sources */,
 				ED1EB9D52265F2A700F1C3D1 /* SessionViewController.swift in Sources */,
 				EDBB775A223795A0004D3D2F /* AppDelegate.swift in Sources */,
+				EDA9B5E5227333B700AB0807 /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

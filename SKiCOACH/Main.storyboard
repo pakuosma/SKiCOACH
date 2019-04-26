@@ -236,10 +236,10 @@
             </objects>
             <point key="canvasLocation" x="1357.9710144927537" y="-3609.375"/>
         </scene>
-        <!--View Controller-->
+        <!--Result View Controller-->
         <scene sceneID="oVW-su-kdE">
             <objects>
-                <viewController id="Q5k-au-jL6" sceneMemberID="viewController">
+                <viewController id="Q5k-au-jL6" customClass="ResultViewController" customModule="SKiCOACH" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ypj-wu-hMK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1400"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -445,7 +445,7 @@
                                         <rect key="frame" x="230" y="1317" width="152" height="83"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <connections>
-                                            <segue destination="yBN-Ip-C7m" kind="show" id="pps-7Q-dJj"/>
+                                            <action selector="pushedDoneButton:" destination="Q5k-au-jL6" eventType="touchUpInside" id="rGp-sF-f00"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -1136,7 +1136,4 @@
         <image name="ski_route.jpg" width="472" height="735"/>
         <image name="snowflakes2436x1125" width="270" height="584.6400146484375"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="BeW-C3-TvN"/>
-    </inferredMetricsTieBreakers>
 </document>
