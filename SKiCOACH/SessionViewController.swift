@@ -34,6 +34,7 @@ class SessionViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         switch CLLocationManager.authorizationStatus(){
         case .authorizedAlways, .authorizedWhenInUse, .notDetermined:
+            
             self.locationSensor!.start()
             
             self.locationSensor?.setLocationHandler({ (locations) in
@@ -46,6 +47,7 @@ class SessionViewController: UIViewController {
                     // self.mapView!.addAnnotation(anotation)
                 }
             })
+            
             break
         case .restricted:
             break

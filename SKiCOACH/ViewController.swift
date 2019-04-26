@@ -23,13 +23,29 @@ class ViewController: UIViewController {
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var fromWatchLabel: UILabel!
     
-    var locationSensor:LocationSensor? = nil
-    var distance:Double = 0
+    @IBAction func tapToStart(_ sender: UIButton) {
+        
+        if let sessionViewController = storyboard?.instantiateViewController(withIdentifier: "SessionViewController") as? SessionViewController {
+            self.present(sessionViewController, animated: true, completion: nil)
+        }
+        if self.session.isPaired == true && self.session.isWatchAppInstalled == true {
+            self.session.sendMessage(["msg":"Let's go Markus! Do your best! I'll be here with you!"], replyHandler: nil, errorHandler: nil)
+        }
+
+    }
     
     let session = WCSession.default
     
+    var locationSensor:LocationSensor? = nil
+    var distance:Double = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if self.session.isPaired == true && self.session.isWatchAppInstalled == true {
+            self.session.sendMessage(["msg":"Hello! I'm Siri and I'll be involved in coaching you ski great!"], replyHandler: nil, errorHandler: nil)
+        }
+        
         NotificationCenter.default.addObserver(self, selector: #selector(messageReceived), name: .receivedWatchMessage, object: nil)
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         self.locationSensor = appDelegate.locationSensor
@@ -39,7 +55,9 @@ class ViewController: UIViewController {
 //        }else{
 //            self.sensingSwitch.isOn = false
 //        }
-
+        
+        //let viewController = SessionViewController()
+        //self.present(viewController, animated: true, completion: nil)
     }
     
     @objc func messageReceived(info: Notification)
@@ -52,7 +70,6 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         //self.didChangeDatePicker(_sender: datePicker)
-
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -102,13 +119,13 @@ class ViewController: UIViewController {
         case 0:
             skatingStyleImage.image = UIImage.init(named: "select-classic")
             if self.session.isPaired == true && self.session.isWatchAppInstalled == true {
-                self.session.sendMessage(["msg":"start classic training"], replyHandler: nil, errorHandler: nil)
+                self.session.sendMessage(["msg":"Let's go classic skiing?"], replyHandler: nil, errorHandler: nil)
             }
             break
         case 1:
             skatingStyleImage.image = UIImage.init(named: "select-skate")
             if self.session.isPaired == true && self.session.isWatchAppInstalled == true {
-                self.session.sendMessage(["msg":"start skate training"], replyHandler: nil, errorHandler: nil)
+                self.session.sendMessage(["msg":"Let's go free style skiing?"], replyHandler: nil, errorHandler: nil)
             }
             break
         default:

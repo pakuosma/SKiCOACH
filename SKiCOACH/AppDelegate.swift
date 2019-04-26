@@ -17,15 +17,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
     var window: UIWindow?
     
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
-        //<#code#>
+        
     }
     
-    func session(_ session: WCSession, didReceiveMessage message: [String : AnyObject]) {
-        //NotificationCenter.defaultCenter().postNotificationName("receivedWatchMessage",object: self, userInfo: message)
-        //NotificationCenter.default.post(name: NSNotification.Name(rawValue: "receivedWatchMessage"), object: self, userInfo: message)
+    func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
         NotificationCenter.default.post(name: .receivedWatchMessage, object: self, userInfo: message)
     }
-    
     
     func sessionDidBecomeInactive(_ session: WCSession) {
         

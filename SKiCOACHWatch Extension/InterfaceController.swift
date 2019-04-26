@@ -9,6 +9,7 @@
 import WatchKit
 import Foundation
 import WatchConnectivity
+import AVFoundation
 
 
 class InterfaceController: WKInterfaceController, WCSessionDelegate {
@@ -16,6 +17,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     @IBOutlet weak var messageLabel: WKInterfaceLabel!
     
     let session = WCSession.default
+    let talker = AVSpeechSynthesizer()
     
     @IBAction func toPhoneTapped() {
         self.session.sendMessage(["msg":"A reply from Watch!"], replyHandler: nil, errorHandler: nil)
@@ -32,6 +34,12 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     @objc func didReceivePhoneData(info:Notification){
         let msg = info.userInfo!
         self.messageLabel.setText(msg["msg"] as? String)
+        
+        //let utterance = AVSpeechUtterance(string: "Train harder!")
+        let utterance = AVSpeechUtterance(string: msg["msg"] as! String)
+        utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+        talker.stopSpeaking(at: .immediate)
+        talker.speak(utterance)
     }
     
     override func willActivate() {

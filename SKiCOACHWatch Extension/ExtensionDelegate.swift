@@ -18,7 +18,7 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate, WCSessionDelegate {
         //code
     }
     
-    func session(_ session: WCSession, didReceiveMessage message: [String : AnyObject] ) {
+    func session(_ session: WCSession, didReceiveMessage message: [String : Any] ) {
         NotificationCenter.default.post(name: .receivedPhoneData, object: self, userInfo: message)
     }
 
