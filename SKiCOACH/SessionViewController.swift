@@ -13,6 +13,7 @@ import MapKit
 
 class SessionViewController: UIViewController {
 
+    @IBOutlet weak var backgroundImageView: UIImageView!
     var locationSensor:LocationSensor? = nil
     var locationUpdateObserver:Any? = nil
     @IBOutlet weak var mapView: MKMapView!
@@ -21,7 +22,7 @@ class SessionViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
+        // backgroundImageView.bringSubviewToFront(self.view)
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         self.locationSensor = appDelegate.locationSensor
         self.locationSensor?.setLocationHandler{ locations in
