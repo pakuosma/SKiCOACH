@@ -25,6 +25,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var fromWatchLabel: UILabel!
+    @IBOutlet weak var startButton: UIButton!
     
     let session = WCSession.default
     let talker = AVSpeechSynthesizer()
@@ -35,7 +36,10 @@ class ViewController: UIViewController {
     var distance:Double = 0
     
     @IBAction func tapToStart(_ sender: UIButton) {
-        
+        self.moveToSessionViewController()
+    }
+
+    func moveToSessionViewController(){
         //Open the view shown during a training
         if let sessionViewController = storyboard?.instantiateViewController(withIdentifier: "SessionViewController") as? SessionViewController {
             self.present(sessionViewController, animated: true, completion: nil)
@@ -63,6 +67,10 @@ class ViewController: UIViewController {
             
             //Receipt back to Watch
             self.session.sendMessage(["msg":"ctrl_message_start_training_ack"], replyHandler: nil, errorHandler: nil)
+            
+            DispatchQueue.main.async {
+                self.moveToSessionViewController()
+            }
             
             //UIButton.sendActions(for: .touchUpInside) //FIXME
             //self.tapToStart() // call to start training on iPhone as well!
