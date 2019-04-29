@@ -37,13 +37,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+        //Check Watch-connectivity
         if (WCSession.isSupported()) {
             let session = WCSession.default
             session.delegate = self
             session.activate()
         }
         
-        // start the location sensor if the sensor is authorized
+        //Start the location sensor if the sensor is authorized
         switch CLLocationManager.authorizationStatus(){
         case .notDetermined:
             break

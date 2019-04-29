@@ -8,8 +8,11 @@
 import UIKit
 import WatchConnectivity
 import MapKit
+import AVFoundation
 import CoreLocation
 import CoreData
+import CoreMotion
+
 
 extension Notification.Name {
     static let receivedWatchMessage = Notification.Name("receivedWatchMessage")
@@ -23,41 +26,25 @@ class ViewController: UIViewController {
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var fromWatchLabel: UILabel!
     
-    @IBAction func tapToStart(_ sender: UIButton) {
-        
-        if let sessionViewController = storyboard?.instantiateViewController(withIdentifier: "SessionViewController") as? SessionViewController {
-            self.present(sessionViewController, animated: true, completion: nil)
-        }
-        if self.session.isPaired == true && self.session.isWatchAppInstalled == true {
-            self.session.sendMessage(["msg":"Let's go Markus! Do your best! I'll be here with you!"], replyHandler: nil, errorHandler: nil)
-        }
-
-    }
-    
     let session = WCSession.default
+    let talker = AVSpeechSynthesizer()
+    var motionManager = CMMotionManager()
+    let sensorMessagePlayed = false
     
     var locationSensor:LocationSensor? = nil
     var distance:Double = 0
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    @IBAction func tapToStart(_ sender: UIButton) {
         
-        if self.session.isPaired == true && self.session.isWatchAppInstalled == true {
-            self.session.sendMessage(["msg":"Hello! I'm Siri and I'll be involved in coaching you ski great!"], replyHandler: nil, errorHandler: nil)
+        //Open the view shown during a training
+        if let sessionViewController = storyboard?.instantiateViewController(withIdentifier: "SessionViewController") as? SessionViewController {
+            self.present(sessionViewController, animated: true, completion: nil)
         }
         
-        NotificationCenter.default.addObserver(self, selector: #selector(messageReceived), name: .receivedWatchMessage, object: nil)
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        self.locationSensor = appDelegate.locationSensor
-        
-//        if UserDefaults.standard.bool(forKey: LocationSensor.SENSOR_LOCATION_SETTING_STATUS) {
-//            self.sensingSwitch.isOn = true
-//        }else{
-//            self.sensingSwitch.isOn = false
-//        }
-        
-        //let viewController = SessionViewController()
-        //self.present(viewController, animated: true, completion: nil)
+        //Check Watch-connectivity and notify user via the message send to the Watch, which speaks it out via Siri!
+        if self.session.isPaired == true && self.session.isWatchAppInstalled == true {
+            self.session.sendMessage(["msg":"Let's ski Markus! Do your best!"], replyHandler: nil, errorHandler: nil)
+        }
     }
     
     @objc func messageReceived(info: Notification)
@@ -66,16 +53,99 @@ class ViewController: UIViewController {
         DispatchQueue.main.async {
             self.fromWatchLabel.text = message["msg"] as? String
         }
+        if (message["msg"] as? String) == "ctrl_message_start_training_on_iphone" {
+            print("debug: ctrl_message_start_training_on_iphone") //debug
+            
+            let utterance = AVSpeechUtterance(string: "Hi this is Siri on iPhone - starting the training here as well!")
+            utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+            talker.stopSpeaking(at: .immediate)
+            talker.speak(utterance)
+            
+            //Receipt back to Watch
+            self.session.sendMessage(["msg":"ctrl_message_start_training_ack"], replyHandler: nil, errorHandler: nil)
+            
+            //UIButton.sendActions(for: .touchUpInside) //FIXME
+            //self.tapToStart() // call to start training on iPhone as well!
+        }
+        
     }
     
+    
+    
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        self.locationSensor = appDelegate.locationSensor
+        
+        if sensorMessagePlayed == false {
+            let utterance = AVSpeechUtterance(string: "Ski sensor attached. You'll get voice feedback during the training.")
+            utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+            self.talker.stopSpeaking(at: .immediate)
+            self.talker.speak(utterance)
+            let sensorMessagePlayed = true
+        }
+
+        
+        //greet a welcome via the attached AppleWatch
+        if self.session.isPaired == true && self.session.isWatchAppInstalled == true {
+            self.session.sendMessage(["msg":"Hello! I'm Siri on Apple Watch and I'll be helping you ski better!"], replyHandler: nil, errorHandler: nil)
+        }
+        
+        // Skiing Style Detection logic
+        // FIXME: functions, to be implemented on AppleWatch-side too
+        /*
+        motionManager.accelerometerUpdateInterval = 0.2
+        motionManager.startAccelerometerUpdates(to: OperationQueue.current!) { (data, error) in
+            if let myData = data
+            {
+                if (myData.acceleration.x > myData.acceleration.y) && (myData.acceleration.x > myData.acceleration.z)
+                {
+                    print("Classical style detected, push it harder!")
+                    let utterance = AVSpeechUtterance(string: "Classical style detected, push it harder!")
+                    utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+                    self.talker.stopSpeaking(at: .immediate)
+                    self.talker.speak(utterance)
+                }
+                if (myData.acceleration.z > myData.acceleration.x) && (myData.acceleration.z > myData.acceleration.y)
+                {
+                    print("Skating style detected, keep going!")
+                    /*let utterance = AVSpeechUtterance(string: "Skating style detected, keep going!")
+                    utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+                    self.talker.stopSpeaking(at: .immediate)
+                    self.talker.speak(utterance)*/
+                    
+                }
+                if myData.acceleration.x == 0.0 && myData.acceleration.y == 0.0 && myData.acceleration.z == 0.0 {
+                    print("Sliding detected, take full advantage")
+                    let utterance = AVSpeechUtterance(string: "Sliding - take some rest!")
+                    utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+                    self.talker.stopSpeaking(at: .immediate)
+                    self.talker.speak(utterance)
+
+                }
+
+            }
+        }
+        */
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(messageReceived), name: .receivedWatchMessage, object: nil)
+        
+        
+        //let viewController = SessionViewController()
+        //self.present(viewController, animated: true, completion: nil)
+        
+    }
+    
+    
     override func viewDidAppear(_ animated: Bool) {
-        //self.didChangeDatePicker(_sender: datePicker)
+
     }
     
     override func viewDidDisappear(_ animated: Bool) {
-//        if let observer = locationUpdateObserver {
-//            NotificationCenter.default.removeObserver(observer)
-//        }
+        //if let observer = locationUpdateObserver {
+        //NotificationCenter.default.removeObserver(observer)
+        //}
     }
 
     @IBAction func didChangeSensingSwitch(_ sender: UISwitch) {
@@ -119,13 +189,13 @@ class ViewController: UIViewController {
         case 0:
             skatingStyleImage.image = UIImage.init(named: "select-classic")
             if self.session.isPaired == true && self.session.isWatchAppInstalled == true {
-                self.session.sendMessage(["msg":"Let's go classic skiing?"], replyHandler: nil, errorHandler: nil)
+                self.session.sendMessage(["msg":"Train classic!"], replyHandler: nil, errorHandler: nil)
             }
             break
         case 1:
             skatingStyleImage.image = UIImage.init(named: "select-skate")
             if self.session.isPaired == true && self.session.isWatchAppInstalled == true {
-                self.session.sendMessage(["msg":"Let's go free style skiing?"], replyHandler: nil, errorHandler: nil)
+                self.session.sendMessage(["msg":"Train freestyle!"], replyHandler: nil, errorHandler: nil)
             }
             break
         default:

@@ -35,9 +35,11 @@ public class LocationSensor:NSObject{
          */
         locationManager.delegate = self
         // locationManager.pausesLocationUpdatesAutomatically = false
-        locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
+        //locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
+        locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation
         locationManager.allowsBackgroundLocationUpdates = true
-        locationManager.distanceFilter = 100
+        // locationManager.distanceFilter = 100
+        // locationManager.distanceFilter = 100
         if #available(iOS 11.0, *) {
             locationManager.showsBackgroundLocationIndicator = false
         }
@@ -56,6 +58,7 @@ public class LocationSensor:NSObject{
             // print("start sensor")
             locationManager.startUpdatingLocation()
             locationManager.startMonitoringSignificantLocationChanges()
+            locationManager.requestLocation()
             status = true
             break
         }
@@ -71,6 +74,7 @@ public class LocationSensor:NSObject{
     public func setLocationHandler(_ handler: @escaping (([CLLocation]) -> Void)){
         eventHandler = handler
     }
+    
 }
 
 extension LocationSensor: CLLocationManagerDelegate {
@@ -102,6 +106,10 @@ extension LocationSensor: CLLocationManagerDelegate {
     
     public func locationManagerDidResumeLocationUpdates(_ manager: CLLocationManager) {
         // print(#function)
+    }
+    
+    public func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        
     }
 }
 
