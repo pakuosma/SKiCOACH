@@ -68,12 +68,10 @@ class ViewController: UIViewController {
             //Receipt back to Watch
             self.session.sendMessage(["msg":"ctrl_message_start_training_ack"], replyHandler: nil, errorHandler: nil)
             
-            DispatchQueue.main.async {
-                self.moveToSessionViewController()
-            }
-            
-            //UIButton.sendActions(for: .touchUpInside) //FIXME
-            //self.tapToStart() // call to start training on iPhone as well!
+            //move state back to SessionViewController, enable iOS training start from Watch. This works.
+            //DispatchQueue.main.async {
+            //    self.moveToSessionViewController()
+            //}
         }
         
     }
