@@ -11,6 +11,7 @@ import Foundation
 import AVFoundation
 import CoreMotion
 import WatchConnectivity
+import CoreMotion
 
 class InterfaceController: WKInterfaceController, WCSessionDelegate {
     
@@ -21,8 +22,10 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     private var hrTimer = Timer()
     private var feedbackTimer = Timer()
     private var timer = Timer()
-
-    private var isRunning = true
+    private var styleDetectionTimer = Timer()
+    private var styleDetectionEnabled = false
+    
+    var motionManager = CMMotionManager()
     
     @IBOutlet weak var statusLabel: WKInterfaceLabel!
     @IBOutlet weak var elapsedLabel: WKInterfaceLabel!
@@ -37,7 +40,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     let talker = AVSpeechSynthesizer()
     
     @IBAction func startStopAction() {
-        isStarted = !isStarted //toggle the button
+        isStarted = !isStarted
         if isStarted{
             statusLabel.setText("")
             startStopButton.setTitle("Stop")
@@ -88,11 +91,45 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         talker.speak(cheerishFeedback)
     }
     
+    @objc func fireStyleDetectionTimer(timer: Timer) {
+        if styleDetectionEnabled == true {
+             motionManager.accelerometerUpdateInterval = 0.2
+             motionManager.startAccelerometerUpdates(to: OperationQueue.current!) { (data, error) in
+                 if let myData = data {
+                     if (myData.acceleration.x > myData.acceleration.y) && (myData.acceleration.x > myData.acceleration.z) {
+                             print("Classic Wassberg technique detected, push it harder!")
+                             let utterance = AVSpeechUtterance(string: "Classic Wassberg technique detected, push it harder!")
+                             utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+                             self.talker.stopSpeaking(at: .immediate)
+                             self.talker.speak(utterance)
+                     }
+                    
+                     if (myData.acceleration.z > myData.acceleration.x) && (myData.acceleration.z > myData.acceleration.y) {
+                             print("Freestyle skating detected, keep going!")
+                             let utterance = AVSpeechUtterance(string: "Freestyle skating detected, keep going!")
+                             utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+                             self.talker.stopSpeaking(at: .immediate)
+                             self.talker.speak(utterance)
+                     
+                     }
+                    
+                    if myData.acceleration.x == 0.0 && myData.acceleration.y == 0.0 && myData.acceleration.z == 0.0 {
+                                print("Sliding detected, take advantage to recover")
+                                let utterance = AVSpeechUtterance(string: "Sliding detected, take advantage to recover!")
+                                utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+                                self.talker.stopSpeaking(at: .immediate)
+                                self.talker.speak(utterance)
+                    }
+                }
+            }
+        }
+    }
+
+    
     func loopTimer(interval:TimeInterval){ //NSTimer to end at event.
         if timer.isValid {
             timer.invalidate()
         }
-        //timer = Timer.scheduledTimer(withTimeInterval: <#T##TimeInterval#>, repeats: <#T##Bool#>, block: <#T##(Timer) -> Void#>)
         timer = Timer.scheduledTimer(timeInterval: interval,
                                                        target: self,
                                                        selector: #selector(loopTimerDidEnd),
@@ -165,6 +202,10 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         
         feedbackTimer = Timer.scheduledTimer(timeInterval: 20.0, target: self, selector: #selector(fireFeedbackTimer), userInfo: nil, repeats: false)
         
+        if styleDetectionEnabled == true {
+            styleDetectionTimer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(fireStyleDetectionTimer), userInfo: nil, repeats: true)
+        }
+        
     }
     
     override func didDeactivate() {
@@ -177,4 +218,5 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
         //code
     }
+    
 }

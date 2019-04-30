@@ -12,6 +12,7 @@ import AVFoundation
 import CoreLocation
 import UserNotifications
 import MapKit
+import CoreMotion
 
 
 class SessionViewController: UIViewController {
@@ -21,12 +22,14 @@ class SessionViewController: UIViewController {
     var heartBeatTimer = Timer()
     var distanceTimer = Timer()
     var feedbackTimer = Timer()
+    var styleDetectionTimer = Timer()
     var counter = 0.0
     let myInterval:TimeInterval = 1.0//15
     var trainingTime:TimeInterval = 0.0
     var locationSensor:LocationSensor? = nil
     var locationUpdateObserver:Any? = nil
     var debugStr = ""
+    var styleDetectionEnabled = false
     //var watchMessageSent = false
     
     @IBOutlet weak var timerLabel: UILabel!
@@ -37,7 +40,7 @@ class SessionViewController: UIViewController {
     
     let session = WCSession.default
     let talker = AVSpeechSynthesizer()
-    
+    var motionManager = CMMotionManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,6 +58,12 @@ class SessionViewController: UIViewController {
         
         feedbackTimer = Timer.scheduledTimer(timeInterval: 14.0, target:self, selector:#selector(SessionViewController.fireFeedbackTimer),
                                              userInfo: nil, repeats: false)
+        
+        if styleDetectionEnabled == true {
+            styleDetectionTimer = Timer.scheduledTimer(timeInterval: 14.0, target:self, selector:#selector(SessionViewController.fireStyleDetectionTimer),
+                                             userInfo: nil, repeats: false)
+        }
+        
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         self.locationSensor = appDelegate.locationSensor
@@ -92,7 +101,7 @@ class SessionViewController: UIViewController {
     }
     
     @objc func fireFeedbackTimer(timer: Timer) {
-/*        let weatherFeedback = AVSpeechUtterance(string: "Weather is minus five celsius and the snow is hard packed. Your waxing should work well.")
+        /*let weatherFeedback = AVSpeechUtterance(string: "Weather is minus five celsius and the snow is hard packed. Your waxing should work well.")
         weatherFeedback.voice = AVSpeechSynthesisVoice(language: "en-US")
         talker.stopSpeaking(at: .immediate)
         talker.speak(weatherFeedback)
@@ -100,7 +109,41 @@ class SessionViewController: UIViewController {
         talker.speak(styleFeedback)
         let cheerishFeedback = AVSpeechUtterance(string: "You are going strong! Good work!")
         talker.speak(cheerishFeedback)
- */
+         */
+    }
+    
+    @objc func fireStyleDetectionTimer(timer: Timer) {
+        if styleDetectionEnabled == true {
+            motionManager.accelerometerUpdateInterval = 0.2
+            motionManager.startAccelerometerUpdates(to: OperationQueue.current!) { (data, error) in
+                if let myData = data {
+                    if (myData.acceleration.x > myData.acceleration.y) && (myData.acceleration.x > myData.acceleration.z) {
+                        print("Classic Wassberg technique detected, push it harder!")
+                        let utterance = AVSpeechUtterance(string: "Classic Wassberg technique detected, push it harder!")
+                        utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+                        self.talker.stopSpeaking(at: .immediate)
+                        self.talker.speak(utterance)
+                    }
+                    
+                    if (myData.acceleration.z > myData.acceleration.x) && (myData.acceleration.z > myData.acceleration.y) {
+                        print("Freestyle skating detected, keep going!")
+                        let utterance = AVSpeechUtterance(string: "Freestyle skating detected, keep going!")
+                        utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+                        self.talker.stopSpeaking(at: .immediate)
+                        self.talker.speak(utterance)
+                        
+                    }
+                    
+                    if myData.acceleration.x == 0.0 && myData.acceleration.y == 0.0 && myData.acceleration.z == 0.0 {
+                        print("Sliding detected, take advantage to recover")
+                        let utterance = AVSpeechUtterance(string: "Sliding detected, take advantage to recover!")
+                        utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+                        self.talker.stopSpeaking(at: .immediate)
+                        self.talker.speak(utterance)
+                    }
+                }
+            }
+        }
     }
     
     

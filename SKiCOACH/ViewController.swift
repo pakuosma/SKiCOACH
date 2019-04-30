@@ -98,43 +98,6 @@ class ViewController: UIViewController {
             self.session.sendMessage(["msg":"Hello! I'm Siri on Apple Watch and I'll be helping you ski better!"], replyHandler: nil, errorHandler: nil)
         }
         
-        // Skiing Style Detection logic
-        // FIXME: functions, to be implemented on AppleWatch-side too
-        /*
-        motionManager.accelerometerUpdateInterval = 0.2
-        motionManager.startAccelerometerUpdates(to: OperationQueue.current!) { (data, error) in
-            if let myData = data
-            {
-                if (myData.acceleration.x > myData.acceleration.y) && (myData.acceleration.x > myData.acceleration.z)
-                {
-                    print("Classical style detected, push it harder!")
-                    let utterance = AVSpeechUtterance(string: "Classical style detected, push it harder!")
-                    utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
-                    self.talker.stopSpeaking(at: .immediate)
-                    self.talker.speak(utterance)
-                }
-                if (myData.acceleration.z > myData.acceleration.x) && (myData.acceleration.z > myData.acceleration.y)
-                {
-                    print("Skating style detected, keep going!")
-                    /*let utterance = AVSpeechUtterance(string: "Skating style detected, keep going!")
-                    utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
-                    self.talker.stopSpeaking(at: .immediate)
-                    self.talker.speak(utterance)*/
-                    
-                }
-                if myData.acceleration.x == 0.0 && myData.acceleration.y == 0.0 && myData.acceleration.z == 0.0 {
-                    print("Sliding detected, take full advantage")
-                    let utterance = AVSpeechUtterance(string: "Sliding - take some rest!")
-                    utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
-                    self.talker.stopSpeaking(at: .immediate)
-                    self.talker.speak(utterance)
-
-                }
-
-            }
-        }
-        */
-        
         NotificationCenter.default.addObserver(self, selector: #selector(messageReceived), name: .receivedWatchMessage, object: nil)
         
         
